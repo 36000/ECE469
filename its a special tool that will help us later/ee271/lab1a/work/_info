@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/micha/Documents/ee271/lab1
+vmux2_1
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1515611716
+!i10b 1
+!s100 db@k@fnga:kY6M:UDM?iV1
+IJ>QNS`gdkcliNLo;gQk_83
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 mux2_1_sv_unit
+S1
+Z4 dC:/Users/micha/Documents/ee271/lab1a
+Z5 w1515534656
+Z6 8./mux2_1.sv
+Z7 F./mux2_1.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1515611716.000000
+Z10 !s107 ./mux2_1.sv|
+Z11 !s90 -reportprogress|300|./mux2_1.sv|
+!i113 1
+Z12 tCvgOpt 0
+vmux2_1_testbench
+R0
+R1
+!i10b 1
+!s100 AaPWH7@z6J3I9g7Ce@1ED1
+I;eMHfQ<@c56k5bMBE8Am71
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 8
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vmux4_1
+R0
+R1
+!i10b 1
+!s100 E7R1Cg6SkhaPO]9<9MDj:0
+I11V?a:nHG07?Y623?jN2j0
+R2
+Z13 !s105 mux4_1_sv_unit
+S1
+R4
+Z14 w1515537728
+Z15 8./mux4_1.sv
+Z16 F./mux4_1.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z17 !s107 ./mux4_1.sv|
+Z18 !s90 -reportprogress|300|./mux4_1.sv|
+!i113 1
+R12
+vmux4_1_testbench
+R0
+!s110 1515611717
+!i10b 1
+!s100 ll]I`8AJLAGZRQV>dh12>3
+IB_e]D4J:@kToLMR8MO<5J1
+R2
+R13
+S1
+R4
+R14
+R15
+R16
+L0 12
+R8
+r1
+!s85 0
+31
+R9
+R17
+R18
+!i113 1
+R12

@@ -1,0 +1,8 @@
+module comparator_10bit (A,B,A_gt_B);
+	input logic [9:0] A,B;
+	output logic A_gt_B;
+	
+	assign A_gt_B = (A > B);
+	
+	
+endmodule

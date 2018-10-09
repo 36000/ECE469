@@ -1,0 +1,13 @@
+// Michael Humphrey
+module buttons_controller (next_selection, curr_selection, curr_floor, SW, clk, reset);
+	output logic [5:0] selection;
+	input logic [9:0] SW;
+	always_ff @(posedge clk) begin
+		for (int i = 0; i < 6; i++) begin
+			if (SW[i]) selection[i] <= 
+			
+			selection[curr_floor] <= 1'b0;
+		end
+	end
+	
+endmodule

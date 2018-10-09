@@ -1,0 +1,10 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10273): Verilog HDL warning at seg7.sv(23): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/seg7.sv Line: 23
+Warning (10273): Verilog HDL warning at seg7.sv(38): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/seg7.sv Line: 38
+Warning (10273): Verilog HDL warning at fred.sv(82): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 82
+Warning (10273): Verilog HDL warning at fred.sv(83): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 83
+Warning (10273): Verilog HDL warning at fred.sv(84): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 84
+Warning (10273): Verilog HDL warning at fred.sv(85): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 85
+Warning (10273): Verilog HDL warning at fred.sv(86): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 86
+Warning (10273): Verilog HDL warning at fred.sv(87): extended using "x" or "z" File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 87
+Warning (10034): Output port "LEDR[9..2]" at fred.sv(6) has no driver File: C:/Users/micha/Documents/ee271/lab4/fred.sv Line: 6

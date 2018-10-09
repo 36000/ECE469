@@ -1,0 +1,7 @@
+module LFSR_10bit (out, reset, clk)
+	output logic out;
+	input logic reset, clk;
+	
+	
+	
+endmodule

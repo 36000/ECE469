@@ -1,0 +1,11 @@
+module floor_tracker (curr_floor, doors_open, close_doors, selection, direction, reset, clk)
+	output logic [2:0] curr_floor;
+	output logic [1:0] doors_open;
+	
+	input logic close_doors, direction, reset, clk;
+	input logic [5:0] selection;
+	
+	
+	
+endmodule
+

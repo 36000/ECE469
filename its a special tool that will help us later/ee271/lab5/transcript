@@ -1,0 +1,26 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:07:53 on Feb 07,2018
+# vlog -reportprogress 300 ./runway.sv 
+# -- Compiling module runway
+# -- Compiling module runway_testbench
+# 
+# Top level modules:
+# 	runway_testbench
+# End time: 11:07:53 on Feb 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work runway_testbench 
+# Start time: 11:07:54 on Feb 07,2018
+# Loading sv_std.std
+# Loading work.runway_testbench
+# Loading work.runway
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./runway.sv(98)
+#    Time: 2050 ps  Iteration: 1  Instance: /runway_testbench
+# Break in Module runway_testbench at ./runway.sv line 98
+# End time: 14:41:17 on Feb 07,2018, Elapsed time: 3:33:23
+# Errors: 0, Warnings: 0

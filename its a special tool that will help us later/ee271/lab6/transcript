@@ -1,0 +1,26 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:19 on Feb 14,2018
+# vlog -reportprogress 300 ./input_blink.sv 
+# -- Compiling module input_blink
+# -- Compiling module input_blink_testbench
+# 
+# Top level modules:
+# 	input_blink_testbench
+# End time: 11:35:19 on Feb 14,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work input_blink_testbench 
+# Start time: 11:35:20 on Feb 14,2018
+# Loading sv_std.std
+# Loading work.input_blink_testbench
+# Loading work.input_blink
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./input_blink.sv(64)
+#    Time: 1050 ps  Iteration: 1  Instance: /input_blink_testbench
+# Break in Module input_blink_testbench at ./input_blink.sv line 64
+# End time: 13:44:00 on Feb 14,2018, Elapsed time: 2:08:40
+# Errors: 0, Warnings: 0

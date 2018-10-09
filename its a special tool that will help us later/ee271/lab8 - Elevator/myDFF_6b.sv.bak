@@ -1,0 +1,14 @@
+// Michael Humphrey
+module myDFF_6b (Q, D, clk, reset);
+	input  logic clk, reset;
+	input  logic [5:0] 
+	output logic Q;
+	
+	always_ff @(posedge clk) begin 
+		if (reset)  
+			Q <= 1'b0; 
+		else  
+			Q <= D;  
+	end  
+	
+endmodule   

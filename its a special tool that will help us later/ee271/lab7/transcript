@@ -1,0 +1,319 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do run
+# Cannot open macro file: run
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:44 on Feb 21,2018
+# vlog -reportprogress 300 ./play_light.sv 
+# -- Compiling module play_light
+# -- Compiling module play_light_testbench
+# 
+# Top level modules:
+# 	play_light_testbench
+# End time: 11:44:44 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:44 on Feb 21,2018
+# vlog -reportprogress 300 ./input_buffer.sv 
+# -- Compiling module input_buffer
+# -- Compiling module input_buffer_testbench
+# 
+# Top level modules:
+# 	input_buffer_testbench
+# End time: 11:44:44 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./input_blink.sv 
+# -- Compiling module input_blink
+# -- Compiling module input_blink_testbench
+# 
+# Top level modules:
+# 	input_blink_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./LFSR_10bit.sv 
+# -- Compiling module LFSR_10bit
+# -- Compiling module LFSR_10bit_testbench
+# 
+# Top level modules:
+# 	LFSR_10bit_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./score_counter.sv 
+# -- Compiling module score_counter
+# -- Compiling module score_counter_testbench
+# 
+# Top level modules:
+# 	score_counter_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./comparator_10bit.sv 
+# -- Compiling module comparator_10bit
+# -- Compiling module comparator_10bit_testbench
+# 
+# Top level modules:
+# 	comparator_10bit_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:44:45 on Feb 21,2018
+# vlog -reportprogress 300 ./myDFF.sv 
+# -- Compiling module myDFF
+# -- Compiling module myDFF_testbench
+# 
+# Top level modules:
+# 	myDFF_testbench
+# End time: 11:44:45 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 11:44:46 on Feb 21,2018
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.myDFF
+# Loading work.LFSR_10bit
+# Loading work.comparator_10bit
+# Loading work.input_buffer
+# Loading work.input_blink
+# Loading work.play_light
+# Loading work.score_counter
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(149)
+#    Time: 48050 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 149
+add wave -position 6 sim:/DE1_SoC_testbench/dut/computer_player_input/#ASSIGN#5/*
+add wave -position 0  sim:/DE1_SoC_testbench/dut/cdiv/clock
+add wave -position 1  sim:/DE1_SoC_testbench/dut/cdiv/divided_clocks[0]
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/micha/Documents/ee271/lab7/DE1_SoC_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./play_light.sv 
+# -- Compiling module play_light
+# -- Compiling module play_light_testbench
+# 
+# Top level modules:
+# 	play_light_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./input_buffer.sv 
+# -- Compiling module input_buffer
+# -- Compiling module input_buffer_testbench
+# 
+# Top level modules:
+# 	input_buffer_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./input_blink.sv 
+# -- Compiling module input_blink
+# -- Compiling module input_blink_testbench
+# 
+# Top level modules:
+# 	input_blink_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./LFSR_10bit.sv 
+# -- Compiling module LFSR_10bit
+# -- Compiling module LFSR_10bit_testbench
+# 
+# Top level modules:
+# 	LFSR_10bit_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./score_counter.sv 
+# -- Compiling module score_counter
+# -- Compiling module score_counter_testbench
+# 
+# Top level modules:
+# 	score_counter_testbench
+# End time: 11:48:26 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:26 on Feb 21,2018
+# vlog -reportprogress 300 ./comparator_10bit.sv 
+# -- Compiling module comparator_10bit
+# -- Compiling module comparator_10bit_testbench
+# 
+# Top level modules:
+# 	comparator_10bit_testbench
+# End time: 11:48:27 on Feb 21,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:48:27 on Feb 21,2018
+# vlog -reportprogress 300 ./myDFF.sv 
+# -- Compiling module myDFF
+# -- Compiling module myDFF_testbench
+# 
+# Top level modules:
+# 	myDFF_testbench
+# End time: 11:48:27 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:48:27 on Feb 21,2018, Elapsed time: 0:03:41
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 11:48:28 on Feb 21,2018
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.myDFF
+# Loading work.LFSR_10bit
+# Loading work.comparator_10bit
+# Loading work.input_buffer
+# Loading work.input_blink
+# Loading work.play_light
+# Loading work.score_counter
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(149)
+#    Time: 48050 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 149
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:21 on Feb 21,2018
+# vlog -reportprogress 300 ./play_light.sv 
+# -- Compiling module play_light
+# -- Compiling module play_light_testbench
+# 
+# Top level modules:
+# 	play_light_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./input_buffer.sv 
+# -- Compiling module input_buffer
+# -- Compiling module input_buffer_testbench
+# 
+# Top level modules:
+# 	input_buffer_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./input_blink.sv 
+# -- Compiling module input_blink
+# -- Compiling module input_blink_testbench
+# 
+# Top level modules:
+# 	input_blink_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./LFSR_10bit.sv 
+# -- Compiling module LFSR_10bit
+# -- Compiling module LFSR_10bit_testbench
+# 
+# Top level modules:
+# 	LFSR_10bit_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./score_counter.sv 
+# -- Compiling module score_counter
+# -- Compiling module score_counter_testbench
+# 
+# Top level modules:
+# 	score_counter_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./comparator_10bit.sv 
+# -- Compiling module comparator_10bit
+# -- Compiling module comparator_10bit_testbench
+# 
+# Top level modules:
+# 	comparator_10bit_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:50:22 on Feb 21,2018
+# vlog -reportprogress 300 ./myDFF.sv 
+# -- Compiling module myDFF
+# -- Compiling module myDFF_testbench
+# 
+# Top level modules:
+# 	myDFF_testbench
+# End time: 11:50:22 on Feb 21,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:50:23 on Feb 21,2018, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 11:50:23 on Feb 21,2018
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.myDFF
+# Loading work.LFSR_10bit
+# Loading work.comparator_10bit
+# Loading work.input_buffer
+# Loading work.input_blink
+# Loading work.play_light
+# Loading work.score_counter
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(149)
+#    Time: 48050 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 149
+# End time: 11:54:27 on Feb 21,2018, Elapsed time: 0:04:04
+# Errors: 0, Warnings: 0
