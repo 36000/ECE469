@@ -7,7 +7,7 @@ module mux32_1(out, in, select);
 	logic [9:0] wires;
 
 	generate
-		for(i=0; i<8; i++) begin : lvl1
+		for(i=0; i<8; i++) begin : lvl1s
 			mux4_1 lvl1 (wires[i], in[i*4], in[i*4+1], in[i*4+2], in[i*4+3], select[1], select[0]);
 		end
 	endgenerate
