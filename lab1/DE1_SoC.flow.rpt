@@ -1,11 +1,6 @@
 Flow report for DE1_SoC
-<<<<<<< HEAD
-Wed Oct 10 18:35:56 2018
+Wed Oct 10 18:44:43 2018
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-=======
-Wed Oct 10 18:29:23 2018
-Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 ---------------------
@@ -45,9 +40,8 @@ agreement for further details.
 
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
-<<<<<<< HEAD
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 10 18:35:56 2018       ;
+; Flow Status                     ; Successful - Wed Oct 10 18:44:43 2018       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; decoder5_32                                 ;
@@ -67,24 +61,6 @@ agreement for further details.
 ; Total PLLs                      ; 0                                           ;
 ; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
-=======
-+-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Wed Oct 10 18:29:23 2018          ;
-; Quartus Prime Version       ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
-; Revision Name               ; DE1_SoC                                         ;
-; Top-level Entity Name       ; DE1_SoC                                         ;
-; Family                      ; Cyclone V                                       ;
-; Device                      ; 5CGXFC7C7F23C8                                  ;
-; Timing Models               ; Final                                           ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 +-----------------------------------------+
@@ -92,23 +68,18 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-<<<<<<< HEAD
-; Start date & time ; 10/10/2018 18:35:43 ;
-=======
-; Start date & time ; 10/10/2018 18:29:11 ;
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
+; Start date & time ; 10/10/2018 18:44:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SoC             ;
 +-------------------+---------------------+
 
 
-<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                            ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 160948233335762.153922174308276        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 160948233335762.153922227206560        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -120,22 +91,6 @@ agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; decoder5_32                            ; DE1_SoC       ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-=======
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 202883595069510.153922135112196        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -143,13 +98,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-<<<<<<< HEAD
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4835 MB             ; 00:00:31                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:31                           ;
-=======
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4791 MB             ; 00:00:23                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:23                           ;
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4834 MB             ; 00:00:28                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -158,11 +108,7 @@ agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-<<<<<<< HEAD
 ; Analysis & Synthesis ; DESKTOP-PK2A1TJ  ; Windows 10 ; 10.0       ; x86_64         ;
-=======
-; Analysis & Synthesis ; EE-365PC28       ; Windows 10 ; 10.0       ; x86_64         ;
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 +----------------------+------------------+------------+------------+----------------+
 
 

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-Analysis & Synthesis Status : Successful - Wed Oct 10 18:35:56 2018
+Analysis & Synthesis Status : Successful - Wed Oct 10 18:44:43 2018
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-=======
-Analysis & Synthesis Status : Failed - Wed Oct 10 18:29:23 2018
-Quartus Prime Version : 17.0.1 Build 598 06/07/2017 SJ Standard Edition
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 Revision Name : DE1_SoC
 Top-level Entity Name : decoder5_32
 Family : Cyclone V

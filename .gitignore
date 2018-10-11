@@ -14,3 +14,7 @@ timing
 *.summary
 *.rpt
 *.qmsg
+*.qmsg
+*.done
+*.rpt
+*.summary

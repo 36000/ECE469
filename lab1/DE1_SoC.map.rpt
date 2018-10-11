@@ -1,11 +1,6 @@
 Analysis & Synthesis report for DE1_SoC
-<<<<<<< HEAD
-Wed Oct 10 18:35:56 2018
+Wed Oct 10 18:44:43 2018
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-=======
-Wed Oct 10 18:29:23 2018
-Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 ---------------------
@@ -15,7 +10,6 @@ Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-<<<<<<< HEAD
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
@@ -24,10 +18,6 @@ Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
  12. Analysis & Synthesis Suppressed Messages
-=======
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 
@@ -53,9 +43,8 @@ agreement for further details.
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
-<<<<<<< HEAD
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 10 18:35:56 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 10 18:44:43 2018       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; decoder5_32                                 ;
@@ -73,22 +62,6 @@ agreement for further details.
 ; Total PLLs                      ; 0                                           ;
 ; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
-=======
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Oct 10 18:29:23 2018               ;
-; Quartus Prime Version       ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
-; Revision Name               ; DE1_SoC                                         ;
-; Top-level Entity Name       ; DE1_SoC                                         ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -183,13 +156,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-<<<<<<< HEAD
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
-=======
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -199,7 +167,6 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
@@ -292,28 +259,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 
 
-=======
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-<<<<<<< HEAD
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 10 18:35:43 2018
+    Info: Processing started: Wed Oct 10 18:44:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-=======
-    Info: Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
-    Info: Processing started: Wed Oct 10 18:29:10 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file regstim.sv
-    Info (12023): Found entity 1: regstim File: U:/ECE469/lab1/regstim.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.sv
-    Info (12023): Found entity 1: decoder5_32 File: U:/ECE469/lab1/decoder5_32.sv Line: 1
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 Info (12021): Found 1 design units, including 1 entities, in source file register_64.sv
     Info (12023): Found entity 1: register_64 File: C:/Users/micha/GitHub/ECE469/lab1/register_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_1.sv
@@ -327,7 +281,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.
 Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
     Info (12023): Found entity 1: mux32_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
-<<<<<<< HEAD
     Info (12023): Found entity 1: mux2_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 2
     Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4.sv
@@ -339,14 +292,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder3_8 File: C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.sv
     Info (12023): Found entity 1: decoder5_32 File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(7): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 7
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(8): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(8): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(9): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(11): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(16): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 16
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(17): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(19): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 19
 Info (12127): Elaborating entity "decoder5_32" for the top level hierarchy
 Info (12128): Elaborating entity "decoder2_4" for hierarchy "decoder2_4:in_top_bits" File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 8
 Info (12128): Elaborating entity "and_3" for hierarchy "decoder2_4:in_top_bits|and_3:and0" File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 12
@@ -359,47 +304,16 @@ Info (21057): Implemented 70 device resources after synthesis - the final resour
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Wed Oct 10 18:35:56 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
-=======
-    Info (12023): Found entity 1: mux2_1 File: U:/ECE469/lab1/mux2_1.sv Line: 2
-    Info (12023): Found entity 2: mux2_1_testbench File: U:/ECE469/lab1/mux2_1.sv Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF File: U:/ECE469/lab1/D_FF.sv Line: 1
-Warning (12019): Can't analyze file -- file decoder4_16.sv is missing
-Info (12021): Found 1 design units, including 1 entities, in source file decoder3_8.sv
-    Info (12023): Found entity 1: decoder3_8 File: U:/ECE469/lab1/decoder3_8.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4.sv
-    Info (12023): Found entity 1: decoder2_4 File: U:/ECE469/lab1/decoder2_4.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file and_3.sv
-    Info (12023): Found entity 1: and_3 File: U:/ECE469/lab1/and_3.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32a.sv
-    Info (12023): Found entity 1: decoder5_32a File: U:/ECE469/lab1/decoder5_32a.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file and6_1.sv
-    Info (12023): Found entity 1: and6_1 File: U:/ECE469/lab1/and6_1.sv Line: 1
-Error (10170): Verilog HDL syntax error at regfile.sv(29) near text: "foreach";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/regfile.sv Line: 29
-Error (10170): Verilog HDL syntax error at regfile.sv(29) near text: ",";  expecting "]". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/regfile.sv Line: 29
-Error (10112): Ignored design unit "regfile" at regfile.sv(1) due to previous errors File: U:/ECE469/lab1/regfile.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file regfile.sv
-Info (144001): Generated suppressed messages file U:/ECE469/lab1/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 4791 megabytes
-    Error: Processing ended: Wed Oct 10 18:29:24 2018
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:23
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Wed Oct 10 18:44:44 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-<<<<<<< HEAD
 The suppressed messages can be found in C:/Users/micha/GitHub/ECE469/lab1/DE1_SoC.map.smsg.
-=======
-The suppressed messages can be found in U:/ECE469/lab1/DE1_SoC.map.smsg.
->>>>>>> cc920fad529c397c54a7c59589c84e4545634169
 
 
