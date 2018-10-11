@@ -18,3 +18,23 @@ module decoder3_8(out, in, enable);
 	endgenerate
 	
 endmodule
+
+
+module decoder3_8_testbench();
+		logic [7:0] out;
+		logic [2:0] in;
+		logic enable;
+		
+		decoder3_8 dut (.out, .in, .enable);
+		integer i;
+		
+		initial begin
+			for (i = 0; i < 5'b10000; i++) begin
+				in = i[2:0];
+				enable = i[3];
+				#1000;
+			end
+			$stop;
+			
+		end
+endmodule

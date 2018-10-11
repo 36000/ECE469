@@ -15,3 +15,23 @@ module decoder5_32 (out, in, enable);
 	endgenerate
 	
 endmodule
+
+
+module decoder5_32_testbench();
+		logic [31:0] out;
+		logic [4:0] in;
+		logic enable;
+		
+		decoder5_32 dut (.out, .in, .enable);
+		integer i;
+		
+		initial begin
+			for (i = 0; i < 7'b1000000; i++) begin
+				in = i[4:0];
+				enable = i[5];
+				#1000;
+			end
+			$stop;
+			
+		end
+endmodule
