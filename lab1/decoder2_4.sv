@@ -15,3 +15,22 @@ module decoder2_4(out, in, enable);
 	and_3 and3(out[3], in[1], in[0], enable);
 
 endmodule
+
+module decoder2_4_testbench();
+		logic [3:0] out;
+		logic [1:0] in;
+		logic enable;
+		
+		decoder2_4 dut (.out, .in, .enable);
+		
+		initial begin
+				enable=0; in=2'b00; #1000;
+				enable=0; in=2'b01; #1000;
+				enable=0; in=2'b10; #1000;
+				enable=0; in=2'b11; #1000;
+				enable=1; in=2'b00; #1000;
+				enable=1; in=2'b01; #1000;
+				enable=1; in=2'b10; #1000;
+				enable=1; in=2'b11; #1000;
+		end
+endmodule
