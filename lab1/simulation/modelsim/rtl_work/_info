@@ -8,122 +8,96 @@ z2
 !i10f 100
 cModel Technology
 Z0 dU:/ECE469/lab1/simulation/modelsim
-vD_FF
-Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1539290762
-!i10b 1
-!s100 mAi1d^UBh_1VM52d9_c4K1
-IUk14mDhGiQ<`cgUN3>HnZ0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-!s105 D_FF_sv_unit
-S1
-R0
-w1539222820
-8U:/ECE469/lab1/D_FF.sv
-FU:/ECE469/lab1/D_FF.sv
-L0 1
-Z3 OV;L;10.5b;63
-r1
-!s85 0
-31
-!s108 1539290761.000000
-!s107 U:/ECE469/lab1/D_FF.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/D_FF.sv|
-!i113 1
-Z4 o-sv -work work
-Z5 !s92 -sv -work work +incdir+U:/ECE469/lab1
-Z6 tCvgOpt 0
-n@d_@f@f
 vmux2_1
-R1
-!s110 1539290760
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1539291907
 !i10b 1
 !s100 =B<WglR]5d12g4:@jO7A01
 I>P=mSIQK[3G=JVfOCEhaN1
-R2
-Z7 !s105 mux2_1_sv_unit
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 mux2_1_sv_unit
 S1
 R0
-Z8 w1539225404
-Z9 8U:/ECE469/lab1/mux2_1.sv
-Z10 FU:/ECE469/lab1/mux2_1.sv
+Z5 w1539225404
+Z6 8U:/ECE469/lab1/mux2_1.sv
+Z7 FU:/ECE469/lab1/mux2_1.sv
 L0 2
-R3
+Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z11 !s108 1539290759.000000
-Z12 !s107 U:/ECE469/lab1/mux2_1.sv|
-Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/mux2_1.sv|
+Z9 !s108 1539291904.000000
+Z10 !s107 U:/ECE469/lab1/mux2_1.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/mux2_1.sv|
 !i113 1
-R4
-R5
-R6
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+U:/ECE469/lab1
+Z14 tCvgOpt 0
 vmux2_1_testbench
 R1
-!s110 1539290761
+R2
 !i10b 1
 !s100 :eS1PWZ6XAnDD2TXHPJgA2
 I`e]^mO:@GEAWhj;5?WE8J0
-R2
-R7
+R3
+R4
 S1
 R0
+R5
+R6
+R7
+L0 19
 R8
+r1
+!s85 0
+31
 R9
 R10
-L0 19
-R3
-r1
-!s85 0
-31
 R11
+!i113 1
 R12
 R13
-!i113 1
-R4
-R5
-R6
-vregister_1
+R14
+vmux32_1
 R1
-Z14 !s110 1539290764
+!s110 1539291911
 !i10b 1
-!s100 clH`>n<O5NZ:T9>?YhF432
-IQo2P4bRUZ@SHmP<;NiTM51
-R2
-Z15 !s105 register_1_sv_unit
+!s100 >@MmERNj>Dk[`M505HPN33
+IYgoLcSz>1o1:@9eNK?;YF3
+R3
+Z15 !s105 mux32_1_sv_unit
 S1
 R0
-Z16 w1539290662
-Z17 8U:/ECE469/lab1/register_1.sv
-Z18 FU:/ECE469/lab1/register_1.sv
-L0 1
-R3
+Z16 w1539291736
+Z17 8U:/ECE469/lab1/mux32_1.sv
+Z18 FU:/ECE469/lab1/mux32_1.sv
+L0 2
+R8
 r1
 !s85 0
 31
-Z19 !s108 1539290763.000000
-Z20 !s107 U:/ECE469/lab1/register_1.sv|
-Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/register_1.sv|
+Z19 !s108 1539291910.000000
+Z20 !s107 U:/ECE469/lab1/mux32_1.sv|
+Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/mux32_1.sv|
 !i113 1
-R4
-R5
-R6
-vregister_1_testbench
-R1
+R12
+R13
 R14
+vmux32_1_testbench
+R1
+!s110 1539291912
 !i10b 1
-!s100 =>1nHzCKe5BaXMfzN@BCz1
-I>iQeShijUP4F`8KZNC_H91
-R2
+!s100 MkGk2cPU=o<TAi]6j6mdk2
+IQ[Y2Sj3Q^CXz0ock4e9SU2
+R3
 R15
 S1
 R0
 R16
 R17
 R18
-L0 12
-R3
+L0 23
+R8
 r1
 !s85 0
 31
@@ -131,6 +105,31 @@ R19
 R20
 R21
 !i113 1
-R4
-R5
-R6
+R12
+R13
+R14
+vmux4_1
+R1
+!s110 1539291900
+!i10b 1
+!s100 Fl95T2TPgP6[dUROog<180
+ICB0>0eYJ>Cmh>FJZ<`=LJ0
+R3
+!s105 mux4_1_sv_unit
+S1
+R0
+w1539223692
+8U:/ECE469/lab1/mux4_1.sv
+FU:/ECE469/lab1/mux4_1.sv
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1539291897.000000
+!s107 U:/ECE469/lab1/mux4_1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/mux4_1.sv|
+!i113 1
+R12
+R13
+R14

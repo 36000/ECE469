@@ -21,6 +21,7 @@ module register_1_testbench();
 		register_1 dut (.out, .in, .write_enable, .reset, .clk);
 		
 		initial begin
+				@(negedge clk);
 				in <=0; write_enable<=0; reset<=1; @(negedge clk);
 				in <=1; write_enable<=0; reset<=0; @(negedge clk);
 				in <=1; write_enable<=1; reset<=0; @(negedge clk);
