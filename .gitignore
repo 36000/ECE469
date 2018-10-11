@@ -22,3 +22,6 @@ timing
 *.done
 *.rpt
 *.summary
+
+# ignore modelsim directory
+*.bat
