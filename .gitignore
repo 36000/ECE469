@@ -11,3 +11,6 @@ timing
 *.qsf
 *.qws
 *.db_info
+*.summary
+*.rpt
+*.qmsg
