@@ -19,3 +19,30 @@ module mux32_1(out, in, select);
 	mux2_1 mux2 (out, wires[8], wires[9], select[4]);
 
 endmodule
+
+module mux32_1_testbench();
+
+	logic [31:0] in;
+	logic [4:0] select;
+	logic out, clk;
+	
+	parameter ClockDelay = 5000;
+	initial begin // Set up the clock
+		clk <= 0;
+		forever #(ClockDelay/2) clk <= ~clk;
+	end
+
+	mux32_1 dut (.out, .in, .select);
+
+	initial begin
+		@(negedge clk);
+		in <=32'b01110100100101001100111001011001; select<=5'b00000; @(negedge clk);
+		in <=32'b01110100100101001100111001011001; select<=5'b01010; @(negedge clk);
+		in <=32'b01110100100101001100111001011001; select<=5'b11110; @(negedge clk);
+		in <=32'b10100100101101010110001011110101; select<=5'b00000; @(negedge clk);
+		in <=32'b10100100101101010110001011110101; select<=5'b01010; @(negedge clk);
+		in <=32'b10100100101101010110001011110101; select<=5'b11110; @(negedge clk);
+		$stop;
+	end
+
+endmodule
