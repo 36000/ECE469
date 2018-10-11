@@ -8,8 +8,6 @@ testbench
 timing
 
 # ignore Quartus II generated files
-*.qsf
-*.qws
 *.db_info
 *.summary
 *.rpt
@@ -24,3 +22,6 @@ timing
 *.done
 *.rpt
 *.summary
+
+# ignore modelsim directory
+*.bat
