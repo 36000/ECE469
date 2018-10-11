@@ -10,7 +10,7 @@ logic [31:0] [63:0] reg_outputs;
 logic [63:0] [31:0] reg_outputs_rotated;
 
 //connect decoder for writing
-decoder5_32(reg_write_enables, WriteRegister, RegWrite);
+decoder5_32 decoder (reg_write_enables, WriteRegister, RegWrite);
 
 //connect 32 registers
 genvar i;
