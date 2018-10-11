@@ -21,3 +21,6 @@ timing
 *.json
 *.done
 *.summary
+*.done
+*.rpt
+*.summary
