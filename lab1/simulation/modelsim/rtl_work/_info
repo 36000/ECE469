@@ -7,54 +7,130 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/micha/GitHub/ECE469/lab1/simulation/modelsim
-vmux2_1
+Z0 dU:/ECE469/lab1/simulation/modelsim
+vD_FF
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1539224562
+!s110 1539290762
+!i10b 1
+!s100 mAi1d^UBh_1VM52d9_c4K1
+IUk14mDhGiQ<`cgUN3>HnZ0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 D_FF_sv_unit
+S1
+R0
+w1539222820
+8U:/ECE469/lab1/D_FF.sv
+FU:/ECE469/lab1/D_FF.sv
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1539290761.000000
+!s107 U:/ECE469/lab1/D_FF.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/D_FF.sv|
+!i113 1
+Z4 o-sv -work work
+Z5 !s92 -sv -work work +incdir+U:/ECE469/lab1
+Z6 tCvgOpt 0
+n@d_@f@f
+vmux2_1
+R1
+!s110 1539290760
 !i10b 1
 !s100 =B<WglR]5d12g4:@jO7A01
-IKLG7>k2_m@291N@5GBlT=2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 !s105 mux2_1_sv_unit
+I>P=mSIQK[3G=JVfOCEhaN1
+R2
+Z7 !s105 mux2_1_sv_unit
 S1
 R0
-Z5 w1539224462
-Z6 8C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv
-Z7 FC:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv
+Z8 w1539225404
+Z9 8U:/ECE469/lab1/mux2_1.sv
+Z10 FU:/ECE469/lab1/mux2_1.sv
 L0 2
-Z8 OV;L;10.5b;63
+R3
 r1
 !s85 0
 31
-Z9 !s108 1539224562.000000
-Z10 !s107 C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv|
-Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv|
+Z11 !s108 1539290759.000000
+Z12 !s107 U:/ECE469/lab1/mux2_1.sv|
+Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/mux2_1.sv|
 !i113 1
-Z12 o-sv -work work
-Z13 !s92 -sv -work work +incdir+C:/Users/micha/GitHub/ECE469/lab1
-Z14 tCvgOpt 0
-vmux2_1_testbench
-R1
-R2
-!i10b 1
-!s100 :eS1PWZ6XAnDD2TXHPJgA2
-IREPn@iMmUX^B5[GEf?Y;i3
-R3
 R4
-S1
-R0
 R5
 R6
+vmux2_1_testbench
+R1
+!s110 1539290761
+!i10b 1
+!s100 :eS1PWZ6XAnDD2TXHPJgA2
+I`e]^mO:@GEAWhj;5?WE8J0
+R2
 R7
-L0 19
+S1
+R0
 R8
+R9
+R10
+L0 19
+R3
 r1
 !s85 0
 31
-R9
-R10
 R11
-!i113 1
 R12
 R13
+!i113 1
+R4
+R5
+R6
+vregister_1
+R1
+Z14 !s110 1539290764
+!i10b 1
+!s100 clH`>n<O5NZ:T9>?YhF432
+IQo2P4bRUZ@SHmP<;NiTM51
+R2
+Z15 !s105 register_1_sv_unit
+S1
+R0
+Z16 w1539290662
+Z17 8U:/ECE469/lab1/register_1.sv
+Z18 FU:/ECE469/lab1/register_1.sv
+L0 1
+R3
+r1
+!s85 0
+31
+Z19 !s108 1539290763.000000
+Z20 !s107 U:/ECE469/lab1/register_1.sv|
+Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+U:/ECE469/lab1|U:/ECE469/lab1/register_1.sv|
+!i113 1
+R4
+R5
+R6
+vregister_1_testbench
+R1
 R14
+!i10b 1
+!s100 =>1nHzCKe5BaXMfzN@BCz1
+I>iQeShijUP4F`8KZNC_H91
+R2
+R15
+S1
+R0
+R16
+R17
+R18
+L0 12
+R3
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R4
+R5
+R6
