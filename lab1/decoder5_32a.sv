@@ -1,4 +1,4 @@
-module decoder5_32 (out, in, enable);
+module decoder5_32a (out, in, enable);
 
 input logic [4:0] in;
 input logic enable;

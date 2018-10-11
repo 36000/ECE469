@@ -1,5 +1,5 @@
-Analysis & Elaboration report for DE1_SoC
-Wed Oct 10 17:25:37 2018
+Analysis & Synthesis report for DE1_SoC
+Wed Oct 10 18:29:23 2018
 Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
 
 
@@ -7,11 +7,11 @@ Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,42 +35,26 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                  ;
-+-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Oct 10 17:25:37 2018               ;
-; Quartus Prime Version         ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
-; Revision Name                 ; DE1_SoC                                         ;
-; Top-level Entity Name         ; DE1_SoC                                         ;
-; Family                        ; Cyclone V                                       ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
-; Total registers               ; N/A until Partition Merge                       ;
-; Total pins                    ; N/A until Partition Merge                       ;
-; Total virtual pins            ; N/A until Partition Merge                       ;
-; Total block memory bits       ; N/A until Partition Merge                       ;
-; Total PLLs                    ; N/A until Partition Merge                       ;
-; Total DLLs                    ; N/A until Partition Merge                       ;
-+-------------------------------+-------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Oct 10 18:29:23 2018               ;
+; Quartus Prime Version       ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
+; Revision Name               ; DE1_SoC                                         ;
+; Top-level Entity Name       ; DE1_SoC                                         ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,15 +140,35 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
-    Info: Processing started: Wed Oct 10 17:25:24 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC --analysis_and_elaboration
+    Info: Processing started: Wed Oct 10 18:29:10 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regstim.sv
+    Info (12023): Found entity 1: regstim File: U:/ECE469/lab1/regstim.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.sv
+    Info (12023): Found entity 1: decoder5_32 File: U:/ECE469/lab1/decoder5_32.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_64.sv
     Info (12023): Found entity 1: register_64 File: U:/ECE469/lab1/register_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_1.sv
@@ -180,8 +184,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.
     Info (12023): Found entity 2: mux2_1_testbench File: U:/ECE469/lab1/mux2_1.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
     Info (12023): Found entity 1: D_FF File: U:/ECE469/lab1/D_FF.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder4_16.sv
-    Info (12023): Found entity 1: decoder4_16 File: U:/ECE469/lab1/decoder4_16.sv Line: 1
+Warning (12019): Can't analyze file -- file decoder4_16.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file decoder3_8.sv
     Info (12023): Found entity 1: decoder3_8 File: U:/ECE469/lab1/decoder3_8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4.sv
@@ -189,30 +192,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
 Info (12021): Found 1 design units, including 1 entities, in source file and_3.sv
     Info (12023): Found entity 1: and_3 File: U:/ECE469/lab1/and_3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32a.sv
-    Info (12023): Found entity 1: decoder5_32 File: U:/ECE469/lab1/decoder5_32a.sv Line: 1
+    Info (12023): Found entity 1: decoder5_32a File: U:/ECE469/lab1/decoder5_32a.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and6_1.sv
     Info (12023): Found entity 1: and6_1 File: U:/ECE469/lab1/and6_1.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at decoder4_16.sv(8): created implicit net for "in2_bar" File: U:/ECE469/lab1/decoder4_16.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(7): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 7
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(8): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(8): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(9): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(11): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(16): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 16
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(17): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(19): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 19
-Error (10161): Verilog HDL error at decoder4_16.sv(1): object "enable" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: U:/ECE469/lab1/decoder4_16.sv Line: 1
+Error (10170): Verilog HDL syntax error at regfile.sv(29) near text: "foreach";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/regfile.sv Line: 29
+Error (10170): Verilog HDL syntax error at regfile.sv(29) near text: ",";  expecting "]". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/regfile.sv Line: 29
+Error (10112): Ignored design unit "regfile" at regfile.sv(1) due to previous errors File: U:/ECE469/lab1/regfile.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file regfile.sv
 Info (144001): Generated suppressed messages file U:/ECE469/lab1/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 9 warnings
-    Error: Peak virtual memory: 4787 megabytes
-    Error: Processing ended: Wed Oct 10 17:25:37 2018
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:21
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 4791 megabytes
+    Error: Processing ended: Wed Oct 10 18:29:24 2018
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:23
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in U:/ECE469/lab1/DE1_SoC.map.smsg.
 
 

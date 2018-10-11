@@ -1,0 +1,20 @@
+module regfile (read_reg_1, read_reg_2, write_reg, write_data, read_data_1, read_data_2, regwrite);
+
+output logic [63:0] read_data_1, read_data_2;
+input logic [63:0] write_data;
+input logic [4:0] read_reg_1, read_reg_2, write_reg;
+input logic regwrite;
+
+logic [63:0] reg_write_enables;
+logic [31:0] [63:0] reg_outputs;
+
+decoder5_32(reg_write_enables, write_reg, regwrite);
+
+genvar i;
+generate
+	for(i=0; i<64; i++) begin : regs
+		register_64 reggie (out[i], in[i], write, reset, clk);
+	end
+endgenerate
+
+endmodule
