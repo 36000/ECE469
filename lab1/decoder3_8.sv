@@ -10,8 +10,9 @@ module decoder3_8(out, in, enable);
 	decoder2_4 dec0(unenabled_out[3:0], in[1:0], in2_bar);
 	decoder2_4 dec1(unenabled_out[7:4], in[1:0], in[2]);
 	
+	genvar i;
 	generate
-		for (logic [2:0] i=0; i<=7; i++) begin : and_gates
+		for (i=0; i<=7; i++) begin : and_gates
 			and #50 enabled_out_gate (out[i], unenabled_out[i], enable);
 		end
 	endgenerate
