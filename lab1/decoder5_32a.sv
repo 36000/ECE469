@@ -4,16 +4,17 @@ input logic [4:0] in;
 input logic enable;
 output logic [31:0] out;
 logic [9:0] all_in;
+genvar i, j, k, l, m, n, o;
 
 generate
-	for(i=0; i<4; i++) begin : bufs
-	 buf #50 buf1(all_in[i], in[i]);
+	for(n=0; n<4; n++) begin : bufs
+	 buf #50 buf1(all_in[n], in[n]);
 	end
 endgenerate
 
 generate
-	for(i=0; i<4; i++) begin : nots
-	 not #50 not1(all_in[4+i], in[i]);
+	for(o=0; o<4; o++) begin : nots
+	 not #50 not1(all_in[4+o], in[o]);
 	end
 endgenerate
 

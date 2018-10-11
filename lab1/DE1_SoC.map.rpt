@@ -1,5 +1,5 @@
 Analysis & Elaboration report for DE1_SoC
-Wed Oct 10 17:16:14 2018
+Wed Oct 10 17:25:37 2018
 Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                  ;
 +-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Oct 10 17:16:14 2018               ;
+; Analysis & Elaboration Status ; Failed - Wed Oct 10 17:25:37 2018               ;
 ; Quartus Prime Version         ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
 ; Revision Name                 ; DE1_SoC                                         ;
 ; Top-level Entity Name         ; DE1_SoC                                         ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
-    Info: Processing started: Wed Oct 10 17:16:01 2018
+    Info: Processing started: Wed Oct 10 17:25:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register_64.sv
@@ -173,12 +173,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux64x3
     Info (12023): Found entity 1: mux64x32_64 File: U:/ECE469/lab1/mux64x32_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
     Info (12023): Found entity 1: mux4_1 File: U:/ECE469/lab1/mux4_1.sv Line: 2
-Error (10170): Verilog HDL syntax error at mux32_1.sv(16) near text: "mux4_1";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/mux32_1.sv Line: 16
-Error (10170): Verilog HDL syntax error at mux32_1.sv(16) near text: ",";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/mux32_1.sv Line: 16
-Error (10170): Verilog HDL syntax error at mux32_1.sv(16) near text: ")";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/mux32_1.sv Line: 16
-Error (10170): Verilog HDL syntax error at mux32_1.sv(18) near text: ",";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/mux32_1.sv Line: 18
-Error (10170): Verilog HDL syntax error at mux32_1.sv(18) near text: ")";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/ECE469/lab1/mux32_1.sv Line: 18
-Info (12021): Found 0 design units, including 0 entities, in source file mux32_1.sv
+Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
+    Info (12023): Found entity 1: mux32_1 File: U:/ECE469/lab1/mux32_1.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
     Info (12023): Found entity 1: mux2_1 File: U:/ECE469/lab1/mux2_1.sv Line: 2
     Info (12023): Found entity 2: mux2_1_testbench File: U:/ECE469/lab1/mux2_1.sv Line: 19
@@ -196,12 +192,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder5_32 File: U:/ECE469/lab1/decoder5_32a.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and6_1.sv
     Info (12023): Found entity 1: and6_1 File: U:/ECE469/lab1/and6_1.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at decoder4_16.sv(8): created implicit net for "in2_bar" File: U:/ECE469/lab1/decoder4_16.sv Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(7): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(8): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(8): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(9): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(11): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(16): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(17): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(19): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 19
+Error (10161): Verilog HDL error at decoder4_16.sv(1): object "enable" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: U:/ECE469/lab1/decoder4_16.sv Line: 1
 Info (144001): Generated suppressed messages file U:/ECE469/lab1/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 5 errors, 0 warnings
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 9 warnings
     Error: Peak virtual memory: 4787 megabytes
-    Error: Processing ended: Wed Oct 10 17:16:14 2018
+    Error: Processing ended: Wed Oct 10 17:25:37 2018
     Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:22
+    Error: Total CPU time (on all processors): 00:00:21
 
 
 +--------------------------------------------+
