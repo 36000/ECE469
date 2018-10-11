@@ -8,37 +8,37 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/micha/GitHub/ECE469/lab1/simulation/modelsim
-vand_3
+vmux2_1
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1539221669
+Z2 !s110 1539224562
 !i10b 1
-!s100 Ac`^NzGAB3k=EY;5dH83P3
-IPV9MNJm74IgOlIl78Eee:2
+!s100 =B<WglR]5d12g4:@jO7A01
+IKLG7>k2_m@291N@5GBlT=2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 !s105 and_3_sv_unit
+Z4 !s105 mux2_1_sv_unit
 S1
 R0
-Z5 w1539221618
-Z6 8C:/Users/micha/GitHub/ECE469/lab1/and_3.sv
-Z7 FC:/Users/micha/GitHub/ECE469/lab1/and_3.sv
-L0 1
+Z5 w1539224462
+Z6 8C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv
+Z7 FC:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv
+L0 2
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1539221669.000000
-Z10 !s107 C:/Users/micha/GitHub/ECE469/lab1/and_3.sv|
-Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/and_3.sv|
+Z9 !s108 1539224562.000000
+Z10 !s107 C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv|
 !i113 1
 Z12 o-sv -work work
 Z13 !s92 -sv -work work +incdir+C:/Users/micha/GitHub/ECE469/lab1
 Z14 tCvgOpt 0
-vand_3_testbench
+vmux2_1_testbench
 R1
 R2
 !i10b 1
-!s100 0Ig]APeoc@=>D9]NPPDR90
-IiO@g>V<NmIYM>996:;fEi1
+!s100 :eS1PWZ6XAnDD2TXHPJgA2
+IREPn@iMmUX^B5[GEf?Y;i3
 R3
 R4
 S1
@@ -46,7 +46,7 @@ R0
 R5
 R6
 R7
-L0 12
+L0 19
 R8
 r1
 !s85 0
@@ -54,81 +54,6 @@ r1
 R9
 R10
 R11
-!i113 1
-R12
-R13
-R14
-vdecoder2_4
-R1
-R2
-!i10b 1
-!s100 mMO`jgT?fG:n9_9S=YE>L3
-I=67_2bf9BfzIV:8l53il11
-R3
-!s105 decoder2_4_sv_unit
-S1
-R0
-w1539135565
-8C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv
-FC:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv
-L0 2
-R8
-r1
-!s85 0
-31
-R9
-!s107 C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv|
-!i113 1
-R12
-R13
-R14
-vdecoder3_8
-R1
-R2
-!i10b 1
-!s100 [f_P3ho3<:Y9]7i6E;Mg?1
-I0DmSl0_]IdZQHYLVfoiYX2
-R3
-!s105 decoder3_8_sv_unit
-S1
-R0
-w1539218314
-8C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv
-FC:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv
-L0 1
-R8
-r1
-!s85 0
-31
-R9
-!s107 C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv|
-!i113 1
-R12
-R13
-R14
-vdecoder5_32
-R1
-R2
-!i10b 1
-!s100 VFW8^bo7Yb6ilC6JZV[F61
-I<8H<H4;j>4zondmFoi<mY1
-R3
-!s105 decoder5_32_sv_unit
-S1
-R0
-w1539218371
-8C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv
-FC:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv
-L0 1
-R8
-r1
-!s85 0
-31
-R9
-!s107 C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/GitHub/ECE469/lab1|C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv|
 !i113 1
 R12
 R13
