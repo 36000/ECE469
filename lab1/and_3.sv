@@ -8,3 +8,22 @@ module and_3(out, a, b, c);
 	and #50 and1(out, w1, c);
 
 endmodule
+
+module and_3_testbench();
+		logic a, b, c;
+		logic out;
+		
+		and_3 dut (.out, .a, .b, .c);
+		integer i;
+		
+		initial begin
+			for (i = 0; i < 8; i++) begin
+				a = i[0];
+				b = i[1];
+				c = i[2];
+				#1000;
+			end
+			$stop;
+			
+		end
+endmodule

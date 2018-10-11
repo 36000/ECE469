@@ -1,17 +1,23 @@
-Analysis & Elaboration report for DE1_SoC
-Wed Oct 10 17:25:37 2018
-Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
+Analysis & Synthesis report for DE1_SoC
+Wed Oct 10 18:35:56 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,47 +41,36 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                  ;
-+-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Oct 10 17:25:37 2018               ;
-; Quartus Prime Version         ; 17.0.1 Build 598 06/07/2017 SJ Standard Edition ;
-; Revision Name                 ; DE1_SoC                                         ;
-; Top-level Entity Name         ; DE1_SoC                                         ;
-; Family                        ; Cyclone V                                       ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
-; Total registers               ; N/A until Partition Merge                       ;
-; Total pins                    ; N/A until Partition Merge                       ;
-; Total virtual pins            ; N/A until Partition Merge                       ;
-; Total block memory bits       ; N/A until Partition Merge                       ;
-; Total PLLs                    ; N/A until Partition Merge                       ;
-; Total DLLs                    ; N/A until Partition Merge                       ;
-+-------------------------------+-------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct 10 18:35:56 2018       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; decoder5_32                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 38                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; DE1_SoC            ; DE1_SoC            ;
+; Top-level entity name                                                           ; decoder5_32        ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -156,63 +151,177 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
+; decoder2_4.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv  ;         ;
+; and_3.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/and_3.sv       ;         ;
+; decoder3_8.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv  ;         ;
+; decoder5_32.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 32          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 32          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 32          ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 0           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 38          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; in[0]~input ;
+; Maximum fan-out                             ; 32          ;
+; Total fan-out                               ; 262         ;
+; Average fan-out                             ; 2.43        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
+; |decoder5_32                       ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 38   ; 0            ; |decoder5_32                               ; decoder5_32 ; work         ;
+;    |decoder3_8:decoder3_8s[0].dec| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |decoder5_32|decoder3_8:decoder3_8s[0].dec ; decoder3_8  ; work         ;
+;    |decoder3_8:decoder3_8s[1].dec| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |decoder5_32|decoder3_8:decoder3_8s[1].dec ; decoder3_8  ; work         ;
+;    |decoder3_8:decoder3_8s[2].dec| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |decoder5_32|decoder3_8:decoder3_8s[2].dec ; decoder3_8  ; work         ;
+;    |decoder3_8:decoder3_8s[3].dec| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |decoder5_32|decoder3_8:decoder3_8s[3].dec ; decoder3_8  ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 32                          ;
+;     normal            ; 32                          ;
+;         6 data inputs ; 32                          ;
+; boundary_port         ; 38                          ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 17.0.1 Build 598 06/07/2017 SJ Standard Edition
-    Info: Processing started: Wed Oct 10 17:25:24 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC --analysis_and_elaboration
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Oct 10 18:35:43 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register_64.sv
-    Info (12023): Found entity 1: register_64 File: U:/ECE469/lab1/register_64.sv Line: 1
+    Info (12023): Found entity 1: register_64 File: C:/Users/micha/GitHub/ECE469/lab1/register_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_1.sv
-    Info (12023): Found entity 1: register_1 File: U:/ECE469/lab1/register_1.sv Line: 1
+    Info (12023): Found entity 1: register_1 File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x32_64.sv
-    Info (12023): Found entity 1: mux64x32_64 File: U:/ECE469/lab1/mux64x32_64.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: U:/ECE469/lab1/mux4_1.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
-    Info (12023): Found entity 1: mux32_1 File: U:/ECE469/lab1/mux32_1.sv Line: 2
-Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: U:/ECE469/lab1/mux2_1.sv Line: 2
-    Info (12023): Found entity 2: mux2_1_testbench File: U:/ECE469/lab1/mux2_1.sv Line: 19
+    Info (12023): Found entity 1: mux64x32_64 File: C:/Users/micha/GitHub/ECE469/lab1/mux64x32_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF File: U:/ECE469/lab1/D_FF.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder4_16.sv
-    Info (12023): Found entity 1: decoder4_16 File: U:/ECE469/lab1/decoder4_16.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder3_8.sv
-    Info (12023): Found entity 1: decoder3_8 File: U:/ECE469/lab1/decoder3_8.sv Line: 1
+    Info (12023): Found entity 1: D_FF File: C:/Users/micha/GitHub/ECE469/lab1/D_FF.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
+    Info (12023): Found entity 1: mux32_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 2
+    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4.sv
-    Info (12023): Found entity 1: decoder2_4 File: U:/ECE469/lab1/decoder2_4.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file and_3.sv
-    Info (12023): Found entity 1: and_3 File: U:/ECE469/lab1/and_3.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32a.sv
-    Info (12023): Found entity 1: decoder5_32 File: U:/ECE469/lab1/decoder5_32a.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file and6_1.sv
-    Info (12023): Found entity 1: and6_1 File: U:/ECE469/lab1/and6_1.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at decoder4_16.sv(8): created implicit net for "in2_bar" File: U:/ECE469/lab1/decoder4_16.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(7): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 7
-Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(8): instance has no name File: U:/ECE469/lab1/register_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(8): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(9): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(11): instance has no name File: U:/ECE469/lab1/mux4_1.sv Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(16): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 16
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(17): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(19): instance has no name File: U:/ECE469/lab1/mux32_1.sv Line: 19
-Error (10161): Verilog HDL error at decoder4_16.sv(1): object "enable" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: U:/ECE469/lab1/decoder4_16.sv Line: 1
-Info (144001): Generated suppressed messages file U:/ECE469/lab1/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 9 warnings
-    Error: Peak virtual memory: 4787 megabytes
-    Error: Processing ended: Wed Oct 10 17:25:37 2018
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:21
+    Info (12023): Found entity 1: decoder2_4 File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file and_3.sv
+    Info (12023): Found entity 1: and_3 File: C:/Users/micha/GitHub/ECE469/lab1/and_3.sv Line: 1
+    Info (12023): Found entity 2: and_3_testbench File: C:/Users/micha/GitHub/ECE469/lab1/and_3.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file decoder3_8.sv
+    Info (12023): Found entity 1: decoder3_8 File: C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.sv
+    Info (12023): Found entity 1: decoder5_32 File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(7): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at register_1.sv(8): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(8): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(9): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at mux4_1.sv(11): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(16): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(17): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(19): instance has no name File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 19
+Info (12127): Elaborating entity "decoder5_32" for the top level hierarchy
+Info (12128): Elaborating entity "decoder2_4" for hierarchy "decoder2_4:in_top_bits" File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 8
+Info (12128): Elaborating entity "and_3" for hierarchy "decoder2_4:in_top_bits|and_3:and0" File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 12
+Info (12128): Elaborating entity "decoder3_8" for hierarchy "decoder3_8:decoder3_8s[0].dec" File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 13
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/micha/GitHub/ECE469/lab1/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 32 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Wed Oct 10 18:35:56 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in U:/ECE469/lab1/DE1_SoC.map.smsg.
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/micha/GitHub/ECE469/lab1/DE1_SoC.map.smsg.
 
 

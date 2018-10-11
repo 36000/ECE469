@@ -4,7 +4,7 @@ module register_1 (out, in, write, reset, clk);
 	input logic in, write, reset, clk;
 	logic w1;
 	
-	mux2_1(w1, out, in, write);
-	D_FF(out, w1, reset, clk);
+	mux2_1 mux0 (w1, out, in, write);
+	D_FF dff0 (out, w1, reset, clk);
 	
 endmodule
