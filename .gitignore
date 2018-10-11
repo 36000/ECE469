@@ -8,8 +8,6 @@ testbench
 timing
 
 # ignore Quartus II generated files
-*.qsf
-*.qws
 *.db_info
 *.summary
 *.rpt
