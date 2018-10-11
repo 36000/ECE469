@@ -1,4 +1,4 @@
-module regfile (ReadData1, ReadData2, WriteData, ReadRegister1, ReadRegister2, WriteRegister, clk);
+module regfile (ReadData1, ReadData2, WriteData, ReadRegister1, ReadRegister2, WriteRegister, RegWrite, clk);
 
 output logic [63:0] ReadData1, ReadData2;
 input logic [63:0] WriteData;
@@ -26,9 +26,10 @@ register_64 reg31 (reg_outputs[31], 64'b0, 1'b1, 1'b0, clk);
 //rotate register outputs to fit multiplexors
 genvar j, k;
 generate
-	always_comb begin
-		for(j=0;j<32;
-		foreach(reg_outputs[regi, byti]) reg_outputs_rotated[byti][regi] = reg_outputs[regi][byti];
+	for(j=0;j<32;j++) begin : reg_index
+	 for(k=0;k<64;k++) begin : byte_index
+	  always_comb reg_outputs_rotated[k][j] = reg_outputs[j][k];
+	 end
 	end
 endgenerate
 
