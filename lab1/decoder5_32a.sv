@@ -24,7 +24,7 @@ generate
 	  for(k=0; k<2; k++) begin : bit3
 	   for(l=0; l<2; l++) begin : bit4
 	    for(m=0; m<2; m++) begin : bit5
-		  and6_1(out[i+j*2+k*4+l*8+m*16], all_in[5*i], all_in[1+5*j], all_in[2+5*k], all_in[3+5*l], all_in[4+5*m], enable);
+		  and6_1 ands (out[i+j*2+k*4+l*8+m*16], all_in[5*i], all_in[1+5*j], all_in[2+5*k], all_in[3+5*l], all_in[4+5*m], enable);
 	    end
 	   end
 	  end

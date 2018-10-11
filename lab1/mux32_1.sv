@@ -9,12 +9,12 @@ module mux32_1(out, in, select);
 	genvar i;
 	generate
 		for(i=0; i<8; i++) begin : lvl1s
-			mux4_1 lvl1 (wires[i], in[i*4], in[i*4+1], in[i*4+2], in[i*4+3], select[1], select[0]);
+			mux4_1 lvl1 (wires[i], in[i*4+3:i*4], select[1:0]);
 		end
 	endgenerate
 	
-	mux4_1 mux0 (wires[8], wires[0], wires[1], wires[2], wires[3], select[3], select[2]);
-	mux4_1 mux1 (wires[9], wires[4], wires[5], wires[6], wires[7], select[3], select[2]);
+	mux4_1 mux0 (wires[8], wires[3:0], select[3:2]);
+	mux4_1 mux1 (wires[9], wires[7:4], select[3:2]);
 	
 	mux2_1 mux2 (out, wires[8], wires[9], select[4]);
 
