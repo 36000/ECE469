@@ -1,0 +1,6 @@
+module decoder5_32 (out, in, enable);
+	
+	
+	
+	
+endmodule
