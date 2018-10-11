@@ -12,9 +12,9 @@ module mux32_1(out, in, select);
 		end
 	endgenerate
 	
-	mux4_1(wires[8], wires[0], wires[1], wires[2], wires[3], select[3], select[2])
-	mux4_1(wires[9], wires[4], wires[5], wires[6], wires[7], select[3], select[2])
+	mux4_1(wires[8], wires[0], wires[1], wires[2], wires[3], select[3], select[2]);
+	mux4_1(wires[9], wires[4], wires[5], wires[6], wires[7], select[3], select[2]);
 	
-	mux2_1(out, wires[8], wires[9], select[4])
+	mux2_1(out, wires[8], wires[9], select[4]);
 
 endmodule
