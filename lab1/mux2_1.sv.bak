@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 //  2 to 1 mux
 module mux2_1(out, in0, in1, select);
 

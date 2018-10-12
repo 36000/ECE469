@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 module decoder5_32 (out, in, enable);
 	
 	output logic [31:0] out;

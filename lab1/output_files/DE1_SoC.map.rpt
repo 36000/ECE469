@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Oct 11 15:18:09 2018
+Thu Oct 11 21:21:03 2018
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 11 15:18:09 2018       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 11 21:21:03 2018       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; regfile                                     ;
@@ -210,18 +210,18 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                     ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
-; register_64.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/register_64.sv ;         ;
-; register_1.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/register_1.sv  ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/regfile.sv     ;         ;
-; mux64x32_64.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/mux64x32_64.sv ;         ;
-; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv      ;         ;
-; mux32_1.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv     ;         ;
-; D_FF.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/D_FF.sv        ;         ;
-; decoder5_32.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv ;         ;
-; decoder3_8.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv  ;         ;
-; decoder2_4.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv  ;         ;
-; and_3.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/and_3.sv       ;         ;
-; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv      ;         ;
+; register_64.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/register_64.sv ;         ;
+; register_1.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/register_1.sv  ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/regfile.sv     ;         ;
+; mux64x32_64.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/mux64x32_64.sv ;         ;
+; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/mux4_1.sv      ;         ;
+; mux32_1.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/mux32_1.sv     ;         ;
+; D_FF.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/D_FF.sv        ;         ;
+; decoder5_32.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/decoder5_32.sv ;         ;
+; decoder3_8.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/decoder3_8.sv  ;         ;
+; decoder2_4.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/decoder2_4.sv  ;         ;
+; and_3.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/and_3.sv       ;         ;
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/john/Desktop/ECE469/lab1/mux2_1.sv      ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
 
 
@@ -4947,7 +4947,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:02:17     ;
+; Top            ; 00:02:00     ;
 +----------------+--------------+
 
 
@@ -4957,60 +4957,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 11 15:15:27 2018
+    Info: Processing started: Thu Oct 11 21:18:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regstim.sv
-    Info (12023): Found entity 1: regstim File: C:/Users/micha/GitHub/ECE469/lab1/regstim.sv Line: 4
+    Info (12023): Found entity 1: regstim File: C:/Users/john/Desktop/ECE469/lab1/regstim.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file register_64.sv
-    Info (12023): Found entity 1: register_64 File: C:/Users/micha/GitHub/ECE469/lab1/register_64.sv Line: 1
+    Info (12023): Found entity 1: register_64 File: C:/Users/john/Desktop/ECE469/lab1/register_64.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file register_1.sv
-    Info (12023): Found entity 1: register_1 File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 1
-    Info (12023): Found entity 2: register_1_testbench File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 12
+    Info (12023): Found entity 1: register_1 File: C:/Users/john/Desktop/ECE469/lab1/register_1.sv Line: 1
+    Info (12023): Found entity 2: register_1_testbench File: C:/Users/john/Desktop/ECE469/lab1/register_1.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/Users/micha/GitHub/ECE469/lab1/regfile.sv Line: 1
+    Info (12023): Found entity 1: regfile File: C:/Users/john/Desktop/ECE469/lab1/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x32_64.sv
-    Info (12023): Found entity 1: mux64x32_64 File: C:/Users/micha/GitHub/ECE469/lab1/mux64x32_64.sv Line: 1
+    Info (12023): Found entity 1: mux64x32_64 File: C:/Users/john/Desktop/ECE469/lab1/mux64x32_64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux4_1.sv Line: 2
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/john/Desktop/ECE469/lab1/mux4_1.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file mux32_1.sv
-    Info (12023): Found entity 1: mux32_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 2
-    Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 23
+    Info (12023): Found entity 1: mux32_1 File: C:/Users/john/Desktop/ECE469/lab1/mux32_1.sv Line: 2
+    Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/john/Desktop/ECE469/lab1/mux32_1.sv Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF File: C:/Users/micha/GitHub/ECE469/lab1/D_FF.sv Line: 1
+    Info (12023): Found entity 1: D_FF File: C:/Users/john/Desktop/ECE469/lab1/D_FF.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32a.sv
-    Info (12023): Found entity 1: decoder5_32a File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32a.sv Line: 1
+    Info (12023): Found entity 1: decoder5_32a File: C:/Users/john/Desktop/ECE469/lab1/decoder5_32a.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file decoder5_32.sv
-    Info (12023): Found entity 1: decoder5_32 File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 1
-    Info (12023): Found entity 2: decoder5_32_testbench File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 20
+    Info (12023): Found entity 1: decoder5_32 File: C:/Users/john/Desktop/ECE469/lab1/decoder5_32.sv Line: 3
+    Info (12023): Found entity 2: decoder5_32_testbench File: C:/Users/john/Desktop/ECE469/lab1/decoder5_32.sv Line: 22
 Info (12021): Found 2 design units, including 2 entities, in source file decoder3_8.sv
-    Info (12023): Found entity 1: decoder3_8 File: C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv Line: 1
-    Info (12023): Found entity 2: decoder3_8_testbench File: C:/Users/micha/GitHub/ECE469/lab1/decoder3_8.sv Line: 23
+    Info (12023): Found entity 1: decoder3_8 File: C:/Users/john/Desktop/ECE469/lab1/decoder3_8.sv Line: 3
+    Info (12023): Found entity 2: decoder3_8_testbench File: C:/Users/john/Desktop/ECE469/lab1/decoder3_8.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file decoder2_4.sv
-    Info (12023): Found entity 1: decoder2_4 File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 2
-    Info (12023): Found entity 2: decoder2_4_testbench File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 19
+    Info (12023): Found entity 1: decoder2_4 File: C:/Users/john/Desktop/ECE469/lab1/decoder2_4.sv Line: 3
+    Info (12023): Found entity 2: decoder2_4_testbench File: C:/Users/john/Desktop/ECE469/lab1/decoder2_4.sv Line: 20
 Info (12021): Found 2 design units, including 2 entities, in source file and_3.sv
-    Info (12023): Found entity 1: and_3 File: C:/Users/micha/GitHub/ECE469/lab1/and_3.sv Line: 1
-    Info (12023): Found entity 2: and_3_testbench File: C:/Users/micha/GitHub/ECE469/lab1/and_3.sv Line: 12
+    Info (12023): Found entity 1: and_3 File: C:/Users/john/Desktop/ECE469/lab1/and_3.sv Line: 3
+    Info (12023): Found entity 2: and_3_testbench File: C:/Users/john/Desktop/ECE469/lab1/and_3.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file and6_1.sv
-    Info (12023): Found entity 1: and6_1 File: C:/Users/micha/GitHub/ECE469/lab1/and6_1.sv Line: 1
+    Info (12023): Found entity 1: and6_1 File: C:/Users/john/Desktop/ECE469/lab1/and6_1.sv Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 2
-    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/micha/GitHub/ECE469/lab1/mux2_1.sv Line: 19
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/john/Desktop/ECE469/lab1/mux2_1.sv Line: 4
+    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/john/Desktop/ECE469/lab1/mux2_1.sv Line: 21
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (12128): Elaborating entity "decoder5_32" for hierarchy "decoder5_32:decoder" File: C:/Users/micha/GitHub/ECE469/lab1/regfile.sv Line: 13
-Info (12128): Elaborating entity "decoder2_4" for hierarchy "decoder5_32:decoder|decoder2_4:in_top_bits" File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 8
-Info (12128): Elaborating entity "and_3" for hierarchy "decoder5_32:decoder|decoder2_4:in_top_bits|and_3:and0" File: C:/Users/micha/GitHub/ECE469/lab1/decoder2_4.sv Line: 12
-Info (12128): Elaborating entity "decoder3_8" for hierarchy "decoder5_32:decoder|decoder3_8:decoder3_8s[0].dec" File: C:/Users/micha/GitHub/ECE469/lab1/decoder5_32.sv Line: 13
-Info (12128): Elaborating entity "register_64" for hierarchy "register_64:regs[0].reggie" File: C:/Users/micha/GitHub/ECE469/lab1/regfile.sv Line: 19
-Info (12128): Elaborating entity "register_1" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1" File: C:/Users/micha/GitHub/ECE469/lab1/register_64.sv Line: 9
-Info (12128): Elaborating entity "mux2_1" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1|mux2_1:mux0" File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 7
-Info (12128): Elaborating entity "D_FF" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1|D_FF:dff0" File: C:/Users/micha/GitHub/ECE469/lab1/register_1.sv Line: 8
-Info (12128): Elaborating entity "mux64x32_64" for hierarchy "mux64x32_64:read1" File: C:/Users/micha/GitHub/ECE469/lab1/regfile.sv Line: 38
-Info (12128): Elaborating entity "mux32_1" for hierarchy "mux64x32_64:read1|mux32_1:muxs[0].muxx" File: C:/Users/micha/GitHub/ECE469/lab1/mux64x32_64.sv Line: 9
-Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x32_64:read1|mux32_1:muxs[0].muxx|mux4_1:lvl1s[0].lvl1" File: C:/Users/micha/GitHub/ECE469/lab1/mux32_1.sv Line: 12
+Info (12128): Elaborating entity "decoder5_32" for hierarchy "decoder5_32:decoder" File: C:/Users/john/Desktop/ECE469/lab1/regfile.sv Line: 13
+Info (12128): Elaborating entity "decoder2_4" for hierarchy "decoder5_32:decoder|decoder2_4:in_top_bits" File: C:/Users/john/Desktop/ECE469/lab1/decoder5_32.sv Line: 10
+Info (12128): Elaborating entity "and_3" for hierarchy "decoder5_32:decoder|decoder2_4:in_top_bits|and_3:and0" File: C:/Users/john/Desktop/ECE469/lab1/decoder2_4.sv Line: 13
+Info (12128): Elaborating entity "decoder3_8" for hierarchy "decoder5_32:decoder|decoder3_8:decoder3_8s[0].dec" File: C:/Users/john/Desktop/ECE469/lab1/decoder5_32.sv Line: 15
+Info (12128): Elaborating entity "register_64" for hierarchy "register_64:regs[0].reggie" File: C:/Users/john/Desktop/ECE469/lab1/regfile.sv Line: 19
+Info (12128): Elaborating entity "register_1" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1" File: C:/Users/john/Desktop/ECE469/lab1/register_64.sv Line: 9
+Info (12128): Elaborating entity "mux2_1" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1|mux2_1:mux0" File: C:/Users/john/Desktop/ECE469/lab1/register_1.sv Line: 7
+Info (12128): Elaborating entity "D_FF" for hierarchy "register_64:regs[0].reggie|register_1:bits[0].reg_1|D_FF:dff0" File: C:/Users/john/Desktop/ECE469/lab1/register_1.sv Line: 8
+Info (12128): Elaborating entity "mux64x32_64" for hierarchy "mux64x32_64:read1" File: C:/Users/john/Desktop/ECE469/lab1/regfile.sv Line: 38
+Info (12128): Elaborating entity "mux32_1" for hierarchy "mux64x32_64:read1|mux32_1:muxs[0].muxx" File: C:/Users/john/Desktop/ECE469/lab1/mux64x32_64.sv Line: 9
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x32_64:read1|mux32_1:muxs[0].muxx|mux4_1:lvl1s[0].lvl1" File: C:/Users/john/Desktop/ECE469/lab1/mux32_1.sv Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/micha/GitHub/ECE469/lab1/output_files/DE1_SoC.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/john/Desktop/ECE469/lab1/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 3508 device resources after synthesis - the final resource count might be different
@@ -5018,15 +5018,15 @@ Info (21057): Implemented 3508 device resources after synthesis - the final reso
     Info (21059): Implemented 128 output pins
     Info (21061): Implemented 3299 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4926 megabytes
-    Info: Processing ended: Thu Oct 11 15:18:10 2018
-    Info: Elapsed time: 00:02:43
-    Info: Total CPU time (on all processors): 00:02:52
+    Info: Peak virtual memory: 4944 megabytes
+    Info: Processing ended: Thu Oct 11 21:21:03 2018
+    Info: Elapsed time: 00:02:18
+    Info: Total CPU time (on all processors): 00:02:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/micha/GitHub/ECE469/lab1/output_files/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/john/Desktop/ECE469/lab1/output_files/DE1_SoC.map.smsg.
 
 

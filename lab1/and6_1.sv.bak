@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 module and6_1 (out, in);
 
 input logic [5:0] in;
