@@ -66,6 +66,18 @@ module regstim();
 			WriteData <= i*64'h0000000000000100+i;
 			@(posedge clk);
 		end
+		
+		// Go back and verify that the registers
+		// retained the data, even after reading
+		$display("%t Checking pattern again.", $time);
+		for (i=0; i<32; i=i+1) begin
+			RegWrite <= 0;
+			ReadRegister1 <= i-1;
+			ReadRegister2 <= i;
+			WriteRegister <= i;
+			WriteData <= i*64'h0000000000000100+i;
+			@(posedge clk);
+		end
 		$stop;
 	end
 endmodule
