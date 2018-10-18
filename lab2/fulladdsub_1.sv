@@ -1,0 +1,14 @@
+//  1 bit full adder with sub signal
+module fulladdsub_1(in, sub, C_in, C_out, S);
+
+	input logic sub, C_in;
+	input logic [1:0] in;
+	output logic C_out, S;
+	logic in1_bar, w1;
+
+	not #50 not1(in1_bar, in[1]);
+	mux2_1 mux1(w1, in[1], in1_bar, sub);
+	
+	fulladder_1 fa1({in[0], w1}, C_in, C_out, S);
+
+endmodule
