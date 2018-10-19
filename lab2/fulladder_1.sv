@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 //  1 bit full adder
 module fulladder_1(in, C_in, C_out, S);
 

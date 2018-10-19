@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 //  ALU
 module alu(A, B, cntrl, result, negative, zero, overflow, carry_out);
 

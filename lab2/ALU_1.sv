@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 //  1 bit ALU
 module ALU_1(A, B, C_in, sub, cntrl, C_out, S);
 
