@@ -22,7 +22,7 @@ module alu(A, B, cntrl, result, negative, zero, overflow, carry_out);
 	endgenerate
 	
 	// establish 'subtract' signal from control signal
-	and #50 subSignal (subtract, cntrl[1], cntrl[2]);
+	and #50 subSignal (subtract, cntrl[1], cntrl[0]);
 	
 	// establish 'carry_out' output signal
 	assign carry_out = carries_out[63];
@@ -34,5 +34,42 @@ module alu(A, B, cntrl, result, negative, zero, overflow, carry_out);
 	// establish 'zero' output signal
 	or_64 zeroSignalBar (result, zeroBar);
 	not #50 zeroSignal (zero, zeroBar);
+	
+endmodule
+
+
+
+module alu_testbench();
+	
+	logic [63:0] A, B;
+	logic [2:0] cntrl;
+	logic [63:0] result;
+	logic negative, zero, overflow, carry_out;
+	// r=B, add, subtract, AND, OR, XOR
+	
+	alu dut (.A, .B, .cntrl, .result, .negative, .zero, .overflow, .carry_out);
+	
+	initial begin
+		A = 64'b0110110100110110110101110100110001101010111110100000110110110100;
+		B = 64'b0;
+		// test the pass B and 'zero' signal
+		cntrl = 3'b000; #5000;
+		// test pass B and 'negative' signal
+		B = 64'b1111000101010010101010101001000110110101011101010101101101010101; #5000;
+		// test 'overflow' signal
+		B = 64'b0111000101010010101010101001000110110101011101010101101101010101;
+		cntrl = 3'b010; #5000;
+		// test add
+		B = 64'b0001000101010010101010101001000110110101011101010101101101010101; #5000;
+		// test subtract
+		cntrl = 3'b011; #5000;
+		// test and
+		cntrl = 3'b100; #5000;
+		// test or
+		cntrl = 3'b101; #5000;
+		// test xor
+		cntrl = 3'b110; #5000;
+	end
+	
 	
 endmodule
