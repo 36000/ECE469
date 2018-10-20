@@ -1,0 +1,6 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10034): Output port "result" at alu.sv(6) has no driver File: U:/ECE469/lab2/alu.sv Line: 6
+Warning (10034): Output port "negative" at alu.sv(7) has no driver File: U:/ECE469/lab2/alu.sv Line: 7
+Warning (10034): Output port "zero" at alu.sv(7) has no driver File: U:/ECE469/lab2/alu.sv Line: 7
+Warning (10034): Output port "overflow" at alu.sv(7) has no driver File: U:/ECE469/lab2/alu.sv Line: 7
+Warning (10034): Output port "carry_out" at alu.sv(7) has no driver File: U:/ECE469/lab2/alu.sv Line: 7
