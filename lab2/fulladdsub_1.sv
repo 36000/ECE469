@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 //  1 bit full adder with sub signal
 module fulladdsub_1(in, sub, C_in, C_out, S);
 
