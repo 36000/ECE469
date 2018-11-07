@@ -17,18 +17,18 @@ module controlblock(controlsigs, instr);
 
 	always_comb begin
 		casez(instr)
-			ADDI: controlsigs = 14'b110100X010100X;
-			ADDS: controlsigs = 14'b100100X010X01X;
-			AND:  controlsigs = 14'b100100X100X00X;
+			ADDI: controlsigs = 14'b1101001010100X;
+			ADDS: controlsigs = 14'b1001001010X01X;
+			AND:  controlsigs = 14'b1001001100X00X;
 			B:    controlsigs = 14'bXXX0011XXXXX0X;
 			B_LT: controlsigs = 14'bXXX0010XXXXX01;
 			CBZ:  controlsigs = 14'bXXX0010XXXXX00;
-			EOR:  controlsigs = 14'b100100X110X00X;
-			LDUR: controlsigs = 14'bX11100X010000X;
-			LSR:  controlsigs = 14'bXX0100XXXXX10X;
-			STUR: controlsigs = 14'b01X010X010000X;
-			SUBS: controlsigs = 14'b100100X011X01X;
-			default: controlsigs = 14'bXXX000XXXXXX0X;
+			EOR:  controlsigs = 14'b1001001110X00X;
+			LDUR: controlsigs = 14'bX111001010000X;
+			LSR:  controlsigs = 14'bXX01001XXXX10X;
+			STUR: controlsigs = 14'b01X0101010000X;
+			SUBS: controlsigs = 14'b1001001011X01X;
+			default: controlsigs = 14'bXXX0001XXXXX0X;
 		endcase
 	end
 	
