@@ -58,15 +58,32 @@ module CPU_singlecycle64(reset, clk);
 	mux2_1 choose_br(PC_select, CondBrTaken, BrTaken, UncondBr);
 	
 	// reg part
-	logic Ab, Da, Db;
+	logic [4:0] Ab;
+	logic [63:0] Da, Db, Dw;
 	
-	mux64x2_1 choose_Reg2Loc(Ab, Rd, Rn, Reg2Loc);
+	mux64x2_1 choose_Reg2Loc(Ab, Rd, Rm, Reg2Loc);
 	
-	
+	regfile register_file(Da, Db, Dw, Rn, Ab, Rd, RegWrite, clk);
 	
 	// ALU part
+	logic [63:0] SE_Imm9, SE_Imm12, ALU_Imm, ALU_B, ALU_out, SHFT_out, logic_result;
+	
+	SE_64 Imm9_extender #(input_size = 9;) (.out(SE_Imm9), .in(Imm9));
+	SE_64 Imm12_extender #(input_size = 12;) (.out(SE_Imm12), .in(Imm12));
+	
+	mux64x2_1 choose_Immediate(ALU_Imm, SE_Imm9, SE_Imm12, BigImm);
+	mux64x2_1 choose_ALUsrc(ALU_B, Db, ALU_Imm, ALUSrc);
+	
+	alu(Da, ALU_B, .cntrl({ALUOp2, ALUOp1, ALUOp0}), ALU_out, negative_ub, zero_ub, overflow_ub, carry_out_ub);
+	
+	shifter right_shifter(Da, .direction(1'b1), shamt, SHFT_out);
+	mux64x2_1 choose_result(logic_result, ALU_out, SHFT_out, Shift);
 	
 	// mem part
+	logic [63:0] mem_out;
 	
-
+	datamem Memory (.address(logic_result), .write_enable(MemWrite), .read_enable(1'b1), .write_data(Db), .clk, .xfer_size(4'b0001), .read_data(mem_out));
+	
+	mux64x2_1 choose_MemToReg(Dw, logic_result, mem_out, MemToReg);
+	
 endmodule
