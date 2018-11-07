@@ -3,7 +3,7 @@
 //  shift left by 2
 module LSL_2(out, in);
 
-	input logic [63:0] in;
+	input logic [63:0] in
 	output logic [63:0] out;
 	
 	assign out[1:0] = 2'b00;

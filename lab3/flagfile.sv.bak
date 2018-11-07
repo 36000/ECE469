@@ -1,8 +1,8 @@
 `timescale 1ns/10ps
 
 //  input flags, output conditional signals
-module flagfile(outflags, CBZ, BLT, negative, zero, overflow, carry_out, reset, enable, clk);
-	input logic negative, zero, overflow, carry_out, enable, reset, clk;
+module flagfile(outflags, CBZ, BLT, negative, zero, overflow, carry_out, reset, enable);
+    input logic negative, zero, overflow, carry_out, enable;
 	output logic CBZ, BLT;
 	output logic [3:0] outflags;
 	
