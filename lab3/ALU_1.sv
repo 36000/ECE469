@@ -16,6 +16,9 @@ module ALU_1(A, B, C_in, sub, cntrl, C_out, S);
 	fulladdsub_1 fas1({A, B}, sub, C_in, C_out, outs[2]);
 	assign outs[3] = outs[2];
 	
+	assign outs[1] = 1'b0;
+	assign outs[7] = 1'b0;
+	
 	mux8_1 mux1(S, outs, cntrl);
 	
 endmodule
