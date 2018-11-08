@@ -1,2 +1,2 @@
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (10281): Verilog HDL Declaration information at flagfile.sv(6): object "BLT" differs only in case from object "blt" in the same scope File: C:/Users/micha/GitHub/ECE469/lab3/flagfile.sv Line: 6
+Info (10281): Verilog HDL Declaration information at flagfile.sv(6): object "BLT" differs only in case from object "blt" in the same scope File: U:/ECE469/lab3/flagfile.sv Line: 6
