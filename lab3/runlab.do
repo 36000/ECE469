@@ -26,6 +26,7 @@ vlog "./LSL_2.sv"
 vlog "./math.sv"
 vlog "./mux32_1.sv"
 vlog "./mux64x2_1.sv"
+vlog "./mux5x2_1.sv"
 vlog "./mux64x32_64.sv"
 vlog "./regfile.sv"
 vlog "./register_1.sv"
@@ -35,7 +36,7 @@ vlog "./SE_64.sv"
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work instructmem_testbench
+vsim -voptargs="+acc" -t 1ps -lib work CPU_testbench
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for

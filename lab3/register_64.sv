@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 module register_64 (out, in, write, reset, clk);
 	output logic [63:0] out;
 	input logic [63:0] in;

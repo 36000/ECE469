@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 module register_1 (out, in, write_enable, reset, clk);
 
 	output logic out;

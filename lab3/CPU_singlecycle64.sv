@@ -1,9 +1,11 @@
+`timescale 1ns/10ps
 
 // Singlecycle CPU 
-module CPU_singlecycle64(reset, clk);
+module CPU_singlecycle64(PC, reset, clk);
 	input logic reset, clk;
 	
-	logic [63:0] PC;
+	output logic [63:0] PC;
+	// initial PC = 64'b0;
 	logic [31:0] instr;
 	
 	logic Reg2Loc, ALUSrc, MemToReg, RegWrite, MemWrite, 
@@ -21,7 +23,7 @@ module CPU_singlecycle64(reset, clk);
 	
 	controlblock ControlBlock ({Reg2Loc, ALUSrc, MemToReg, RegWrite, MemWrite, 
 								BrTaken, UncondBr, ALUOp2, ALUOp1, ALUOp0,
-								BigImm, Shift, SetFlag, isLTnotCBZ}, instr);
+								BigImm, Shift, SetFlag, isLTnotCBZ}, instr[31:21]);
 								
 	assign Rd = instr[4:0];
 	assign Rm = instr[20:16];
@@ -33,7 +35,8 @@ module CPU_singlecycle64(reset, clk);
 	assign Imm26 = instr[25:0];
 	
 	// instruction part
-	logic [63:0] SE_Imm19, SE_Imm26, SE_Imm, SE_Imm_SHFT, new_incremented_PC, new_branch_PC, new_PC, PC_select;
+	logic [63:0] SE_Imm19, SE_Imm26, SE_Imm, SE_Imm_SHFT, new_incremented_PC, new_branch_PC, new_PC;
+	logic PC_select;
 	
 	register_64 PCcontrol (PC, new_PC, 1'b1, reset, clk);
 	instructmem InstructionMemory (PC, instr, clk);
@@ -61,7 +64,7 @@ module CPU_singlecycle64(reset, clk);
 	logic [4:0] Ab;
 	logic [63:0] Da, Db, Dw;
 	
-	mux64x2_1 choose_Reg2Loc(Ab, Rd, Rm, Reg2Loc);
+	mux5x2_1 choose_Reg2Loc(Ab, Rd, Rm, Reg2Loc);
 	
 	regfile register_file(Da, Db, Dw, Rn, Ab, Rd, RegWrite, clk);
 	
@@ -86,4 +89,30 @@ module CPU_singlecycle64(reset, clk);
 	
 	mux64x2_1 choose_MemToReg(Dw, logic_result, mem_out, MemToReg);
 	
+endmodule
+
+module CPU_testbench();
+	parameter ClockDelay = 50000;
+
+	logic	      clk, reset;
+	logic [63:0]  PCPrev, PC;
+	
+	CPU_singlecycle64 dut(.PC, .reset, .clk);
+	
+	initial begin // Set up the clock
+		clk <= 0;
+		forever #(ClockDelay/2) clk <= ~clk;
+	end
+	
+	integer i;
+	initial begin
+		reset <=1; PCPrev = 64'b0; @(posedge clk);
+		reset <=0; @(posedge clk); @(posedge clk); @(posedge clk);
+		while (PCPrev != PC) begin
+			@(posedge clk); 
+			PCPrev <= PC;
+			@(posedge clk);
+		end
+		$stop;
+	end
 endmodule
