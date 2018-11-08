@@ -12,5 +12,5 @@ module flagfile(outflags, CBZ, BLT, negative, zero, overflow, carry_out, reset, 
 	register_1 reg3(outflags[3], carry_out, enable, reset, clk);
 	
 	xor #50 blt(BLT, outflags[0], outflags[2]);
-	assign CBZ = outflags[1];
+	assign CBZ = zero;
 endmodule

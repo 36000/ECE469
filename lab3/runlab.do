@@ -32,6 +32,7 @@ vlog "./regfile.sv"
 vlog "./register_1.sv"
 vlog "./register_64.sv"
 vlog "./SE_64.sv"
+vlog "./UE_64.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the

@@ -22,7 +22,7 @@ module controlblock(controlsigs, instr);
 			AND:  controlsigs = 14'b1001001100X00X;
 			B:    controlsigs = 14'bXXX0011XXXXX0X;
 			B_LT: controlsigs = 14'bXXX0010XXXXX01;
-			CBZ:  controlsigs = 14'bXXX0010XXXXX00;
+			CBZ:  controlsigs = 14'b00X0010000XX00;
 			EOR:  controlsigs = 14'b1001001110X00X;
 			LDUR: controlsigs = 14'bX111001010000X;
 			LSR:  controlsigs = 14'bXX01001XXXX10X;
