@@ -1,5 +1,4 @@
 `timescale 1ns/10ps
-
 // Meaning of signals in and out of the ALU:
 
 // Flags:
