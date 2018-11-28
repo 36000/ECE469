@@ -3,21 +3,27 @@
 // Singlecycle CPU 
 module CPU_pipelined64(PC, reset, clk);
 	input logic reset, clk;
-	
 	output logic [63:0] PC;
+	
 	logic [31:0] instr;
 	logic [13:0] controlsigs;
 	
 	logic [63:0] execute_stage_result;
 	logic PC_select;
 
-	logic [4:0] Ab; logic [63:0] Da, Db, Dw; logic [4:0] Rd, Rn; logic RegWrite;
+	logic [4:0] Ab, Rd, Rn; logic [63:0] Da, Db, Dw; 
+	logic RegWrite;
 	
-	// controls and inputs
+	// Control Signals
 	controlblock ControlBlock (controlsigs, instr[31:21]);
 	
 	// Instruction Fetch Stage
 	IF instruction_fetch (.instr, .PC, .PC_select, .controlsigs, .reset, .clk);
+	/* THIS IS NEW STUFF LOOK AT ME
+	logic [(32+14):0] IFstage_out;
+	register_N #(DATA_WIDTH=(32+14)) IFregister 
+					(.out(IFstage_out), .in({instr, controlsigs}), .write(1'b1), .reset, .clk)
+	*/
 	
 	// Register Fetch Stage
 	RF register_fetch (.Ab, .Rn, .instr, .controlsigs);
@@ -25,6 +31,7 @@ module CPU_pipelined64(PC, reset, clk);
 	// multi-pipe drifting register file
 	// Da, Db, Rn, Ab come from RF forwarding register 
 	// Dw, Rd, RegWrite come from WB forwarding register 
+	// SET clk TO ~clk AT SOME POINT FOR FORWARDING, BUG FIX
 	regfile register_file(Da, Db, Dw, Rn, Ab, Rd, RegWrite, clk); // setting to negative may cause slight issues ALL CAPS
 	
 	// Execute Stage
