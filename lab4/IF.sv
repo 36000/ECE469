@@ -2,10 +2,11 @@
 
 module IF(instr, PC, PC_select, controlsigs, reset, clk);
 	input logic reset, clk;
-	input logic [63:0] PC;
+
 	input logic PC_select;
 	input logic [13:0] controlsigs;
 	
+	output logic [63:0] PC;
 	output logic [31:0] instr;
 
 	logic [63:0] SE_Imm19, SE_Imm26, SE_Imm, SE_Imm_SHFT, new_incremented_PC, new_branch_PC, new_PC;

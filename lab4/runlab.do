@@ -4,6 +4,13 @@ vlib work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
+
+vlog "./CPU_pipelined64.sv"
+vlog "./IF.sv"
+vlog "./RF.sv"
+vlog "./EX.sv"
+vlog "./MEM.sv"
+vlog "./WB.sv"
 vlog "./or_64.sv"
 vlog "./decoder2_4.sv"
 vlog "./decoder3_8.sv"
@@ -16,7 +23,6 @@ vlog "./ALU_1.sv"
 vlog "./alu.sv"
 vlog "./and_3.sv"
 vlog "./controlblock.sv"
-vlog "./CPU_pipelined64.sv"
 vlog "./D_FF.sv"
 vlog "./datamem.sv"
 vlog "./decoder5_32.sv"

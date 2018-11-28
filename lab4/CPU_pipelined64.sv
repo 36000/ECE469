@@ -10,6 +10,8 @@ module CPU_pipelined64(PC, reset, clk);
 	
 	logic [63:0] execute_stage_result;
 	logic PC_select;
+
+	logic [4:0] Ab; logic [63:0] Da, Db, Dw; logic [4:0] Rd, Rn; logic RegWrite;
 	
 	// controls and inputs
 	controlblock ControlBlock (controlsigs, instr[31:21]);
@@ -23,8 +25,7 @@ module CPU_pipelined64(PC, reset, clk);
 	// multi-pipe drifting register file
 	// Da, Db, Rn, Ab come from RF forwarding register 
 	// Dw, Rd, RegWrite come from WB forwarding register 
-	logic [4:0] Ab; logic [63:0] Da, Db, Dw; logic [4:0] Rd, Rn; logic RegWrite;
-	regfile register_file(Da, Db, Dw, Rn, Ab, Rd, RegWrite, ~clk);
+	regfile register_file(Da, Db, Dw, Rn, Ab, Rd, RegWrite, clk); // setting to negative may cause slight issues ALL CAPS
 	
 	// Execute Stage
 	EX execute (.logic_result(execute_stage_result), .PC_select,
