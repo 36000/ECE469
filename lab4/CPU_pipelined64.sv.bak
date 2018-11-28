@@ -6,7 +6,6 @@ module CPU_pipelined64(PC, reset, clk);
 	
 	output logic [63:0] PC;
 	logic [31:0] instr;
-	logic [13:0] controlsigs;
 	
 	logic [63:0] execute_stage_result;
 	logic PC_select;
@@ -15,7 +14,7 @@ module CPU_pipelined64(PC, reset, clk);
 	controlblock ControlBlock (controlsigs, instr[31:21]);
 	
 	// Instruction Fetch Stage
-	IF instruction_fetch (.instr, .PC, .PC_select, .controlsigs, .reset, .clk);
+	IF instruction_fetch (.instr, .PC, .PC_select, .reset, .clk);
 	
 	// Register Fetch Stage
 	RF register_fetch (.Ab, .Rn, .instr, .controlsigs);
@@ -31,7 +30,7 @@ module CPU_pipelined64(PC, reset, clk);
 				.Da, .Db, .instr, .controlsigs, .clk, .reset);
 	
 	// Data Memory Stage
-	MEM data_memory (.Dw, .logic_result(execute_stage_result), .Db, .instr, .controlsigs, .clk);
+	MEM data_memory (.Dw, .logic_result(execute_stage_result), Db, instr, controlsigs);
 	
 	// Writeback Stage
 	WB writeback (.Rd, .RegWrite, .instr, .controlsigs);

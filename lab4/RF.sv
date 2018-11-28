@@ -1,0 +1,20 @@
+`timescale 1ns/10ps
+
+module RF(Ab, Rn, instr, controlsigs);
+	output logic [4:0] Rn, Ab;
+	
+	input logic [31:0] instr;
+	input logic [13:0] controlsigs;
+	
+	logic Reg2Loc;
+	logic [4:0] Rm, Rd;
+	
+	assign Reg2Loc = controlsigs[13];
+	assign Rn = instr[9:5];
+	assign Rm = instr[20:16];
+	assign Rd = instr[4:0];
+	
+	mux5x2_1 choose_Reg2Loc(Ab, Rd, Rm, Reg2Loc);
+endmodule
+	
+	

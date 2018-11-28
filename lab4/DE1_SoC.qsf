@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY CPU_singlecycle64
+set_global_assignment -name TOP_LEVEL_ENTITY CPU_pipelined64
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "THU JUL 11 11:26:45 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.1 Standard Edition"
@@ -297,6 +297,14 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"
+set_global_assignment -name SYSTEMVERILOG_FILE WB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE UE_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux5x2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MEM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE EX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CPU_pipelined64.sv
 set_global_assignment -name SDC_FILE DE1_SoC.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE SE_64.sv
 set_global_assignment -name SYSTEMVERILOG_FILE register_64.sv
@@ -319,7 +327,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE decoder5_32.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder3_8.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder2_4.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE CPU_singlecycle64.sv
 set_global_assignment -name SYSTEMVERILOG_FILE controlblock.sv
 set_global_assignment -name SYSTEMVERILOG_FILE and_3.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_1.sv
