@@ -1,9 +1,12 @@
 `timescale 1ns/10ps
 
-module EX(logic_result, PC_select,
+module EX(logic_result, PC_select, Rd, F_enable,
 		  Da, Db, instr, controlsigs, clk, reset);
 	output logic [63:0] logic_result;
 	output PC_select;
+	output logic [4:0] Rd;
+	output logic F_enable;
+	
 	input logic [63:0] Da, Db;
 	
 	input clk, reset;
@@ -21,6 +24,9 @@ module EX(logic_result, PC_select,
 	assign shamt = instr[15:10];
 	assign Imm9 = instr[20:12];
 	assign Imm12 = instr[21:10];
+	assign Rd = instr[4:0];
+	
+	and #50 and0(F_enable, ~MemToReg, RegWrite);
 		  
 	logic [63:0] SE_Imm9, UE_Imm12, ALU_Imm, ALU_B, ALU_out, SHFT_out;
 	logic negative, zero, overflow, carry_out,

@@ -1,7 +1,9 @@
 `timescale 1ns/10ps
 
-module MEM(Dw, logic_result, Db, instr, controlsigs, clk);
+module MEM(Dw, Rd, F_enable, logic_result, Db, instr, controlsigs, clk);
 	output logic [63:0] Dw;
+	output logic [4:0] Rd;
+	output logic F_enable;
 
 	input logic [63:0] logic_result, Db;
 	input logic [31:0] instr;
@@ -10,9 +12,13 @@ module MEM(Dw, logic_result, Db, instr, controlsigs, clk);
 
 	logic [63:0] mem_out;
 	
-	logic MemWrite; logic MemToReg;
+	logic MemWrite; logic MemToReg; logic RegWrite;
 	assign MemWrite = controlsigs[9];
 	assign MemToReg = controlsigs[11];
+	assign Rd = instr[4:0];
+	assign RegWrite = controlsigs[10];
+	
+	and #50 and0(F_enable, MemToReg, RegWrite);
 	
 	datamem Memory (.address(logic_result), .write_enable(MemWrite), .read_enable(MemToReg), .write_data(Db), .clk, .xfer_size(4'b1000), .read_data(mem_out));
 	
