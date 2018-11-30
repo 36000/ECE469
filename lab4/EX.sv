@@ -1,11 +1,10 @@
 `timescale 1ns/10ps
 
-module EX(logic_result, PC_select, Rd, F_enable,
+module EX(logic_result, PC_select, Rd, F_enable, BrTaken
 		  Da, Db, instr, controlsigs, clk, reset);
 	output logic [63:0] logic_result;
-	output PC_select;
 	output logic [4:0] Rd;
-	output logic F_enable;
+	output logic F_enable, BrTaken, PC_select;
 	
 	input logic [63:0] Da, Db;
 	
@@ -13,8 +12,8 @@ module EX(logic_result, PC_select, Rd, F_enable,
 	
 	input logic [31:0] instr;
 	input logic [13:0] controlsigs;
-	logic Reg2Loc, ALUSrc, MemToReg, RegWrite, MemWrite, 
-	      BrTaken, UncondBr, ALUOp2, ALUOp1, ALUOp0,
+	logic Reg2Loc, ALUSrc, MemToReg, RegWrite, MemWrite,
+		  UncondBr, ALUOp2, ALUOp1, ALUOp0,
 		  BigImm, Shift, SetFlag, isLTnotCBZ;							
 	assign {Reg2Loc, ALUSrc, MemToReg, RegWrite, MemWrite, 
 		  BrTaken, UncondBr, ALUOp2, ALUOp1, ALUOp0,

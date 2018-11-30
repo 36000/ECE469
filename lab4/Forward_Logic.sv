@@ -1,5 +1,5 @@
 // forwarding logic
-module Register_Forward();
+module Register_Forward(f_Da, f_Db, Da, Db, Aa, Ab, EX_Result, EX_id, EX_enable, MEM_Result, MEM_id, MEM_enable);
 	output logic [63:0] f_Da, f_Db;
 
 	input logic [63:0] Da, Db, EX_Result, MEM_Result;
