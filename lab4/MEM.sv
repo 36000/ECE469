@@ -18,7 +18,7 @@ module MEM(Dw, Rd, F_enable, logic_result, Db, instr, controlsigs, clk);
 	assign Rd = instr[4:0];
 	assign RegWrite = controlsigs[10];
 	
-	and #50 and0(F_enable, MemToReg, RegWrite);
+	assign F_enable = RegWrite;
 	
 	datamem Memory (.address(logic_result), .write_enable(MemWrite), .read_enable(MemToReg), .write_data(Db), .clk, .xfer_size(4'b1000), .read_data(mem_out));
 	

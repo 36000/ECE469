@@ -12,19 +12,23 @@ module CPU_pipelined64(PC, reset, clk);
 	logic PC_select;
 
 	logic [4:0] Ab, Rd, Rn; logic [63:0] Da, Db, Dw; 
-	logic RegWrite, EX_Br_Taken;
+	logic RegWrite, EX_Br_Taken, EX_UncondBr;
 	
 	logic EX_enable, MEM_enable;
 	logic [4:0] EX_id, MEM_id;
+	
+	logic [(32+14):0] IFstage_out;
+	logic [(64+64+32+14):0] RFstage_out;
+	logic [(64+64+1+32+14):0] EXstage_out;
+	logic [(64+32+14):0] MEMstage_out;
 	
 	// Control Signals
 	controlblock ControlBlock (controlsigs, instr[31:21]);
 	
 	// Instruction Fetch Stage
-	IF instruction_fetch (.instr, .PC, .PC_select_b(EXstage_out[(1+32+14-1)]), .PC_select_ub(PC_select), .BrTaken(EX_Br_Taken), .controlsigs, .reset, .clk);
+	IF instruction_fetch (.instr, .PC, .PC_select_b(1'b0), .PC_select_ub(PC_select), .EX_instr(RFstage_out[(32+14-1):14]), .BrTaken(EX_Br_Taken), .UncondBr(EX_UncondBr), .controlsigs, .reset, .clk);
 
-	logic [(32+14):0] IFstage_out;
-	register_N #(DATA_WIDTH=(32+14)) IFregister 
+	register_N #((32+14)) IFregister 
 					(.out(IFstage_out), .in({instr, controlsigs}), .write(1'b1), .reset, .clk);
 	
 	
@@ -34,15 +38,14 @@ module CPU_pipelined64(PC, reset, clk);
 	 Da, Db, Rn, Ab come from RF forwarding register 
 	 Dw, Rd, RegWrite come from WB forwarding register 
 	 */
-	regfile register_file(.Da, .Db, 
-				.Dw(MEMstage_out[(64+32+14-1):(32+14)]), 
-				.Rn, 
-				.Ab, .Rd, .RegWrite, ~clk);
+	regfile register_file(Da, Db, 
+				MEMstage_out[(64+32+14-1):(32+14)], 
+				Rn, 
+				Ab, Rd, RegWrite, ~clk);
 	
 	Register_Forward forwarding_control(.f_Da, .f_Db, .Da, .Db, .Aa(Rn), .Ab, .EX_Result(execute_stage_result), .EX_id, .EX_enable, .MEM_Result(Dw), .MEM_id, .MEM_enable);
 	
-	logic [(64+64+32+14):0] RFstage_out;
-	register_N #(DATA_WIDTH=(64+64+32+14)) RFregister 
+	register_N #((64+64+32+14)) RFregister 
 					(.out(RFstage_out), 
 					.in({f_Da, f_Db, IFstage_out[(32+14-1):14], IFstage_out[13:0]}), 
 					.write(1'b1), .reset, .clk);
@@ -50,13 +53,12 @@ module CPU_pipelined64(PC, reset, clk);
 	
 	// Execute Stage
 	EX execute (.logic_result(execute_stage_result), .PC_select,
-				.Rd(EX_id), .F_enable(EX_enable), .BrTaken(EX_Br_Taken)
+				.Rd(EX_id), .F_enable(EX_enable), .EX_Br_Taken, .EX_UncondBr,
 				.Da(RFstage_out[(64+64+32+14-1):(64+32+14)]), 
 				.Db(RFstage_out[(64+32+14-1):(32+14)]), 
 				.instr(RFstage_out[(32+14-1):14]), 
 				.controlsigs(RFstage_out[13:0]), .clk, .reset);
-	logic [(64+64+1+32+14):0] EXstage_out;
-	register_N #(DATA_WIDTH=(64+64+1+32+14)) EXregister 
+	register_N #((64+64+1+32+14)) EXregister 
 					(.out(EXstage_out), 
 					.in({RFstage_out[(64+32+14-1):(32+14)], execute_stage_result, PC_select, RFstage_out[(32+14-1):14], RFstage_out[13:0]}), 
 					.write(1'b1), .reset, .clk);
@@ -67,8 +69,7 @@ module CPU_pipelined64(PC, reset, clk);
 				.Db(EXstage_out[(64+64+1+32+14-1):(64+1+32+14)]), 
 				.instr(EXstage_out[(32+14-1):14]), 
 				.controlsigs(EXstage_out[13:0]), .clk);
-	logic [(64+32+14):0] MEMstage_out;
-	register_N #(DATA_WIDTH=(64+32+14)) MEMregister 
+	register_N #((64+32+14)) MEMregister 
 					(.out(MEMstage_out), 
 					.in({Dw, EXstage_out[(32+14-1):14], EXstage_out[13:0]}), 
 					.write(1'b1), .reset, .clk);
@@ -78,7 +79,7 @@ module CPU_pipelined64(PC, reset, clk);
 endmodule
 
 module CPU_testbench();
-	parameter ClockDelay = 50000;
+	parameter ClockDelay = 20000;
 
 	logic	      clk, reset;
 	logic [63:0]  PCPrev, PC;
@@ -94,10 +95,11 @@ module CPU_testbench();
 	initial begin
 		reset <=1; PCPrev = 64'b0; @(posedge clk);
 		reset <=0; @(posedge clk); @(posedge clk); @(posedge clk);
-		while (PCPrev != PC) begin
-			@(posedge clk); 
+		while (PCPrev != PC && PCPrev - 4 != PC) begin
+			@(posedge clk); @(posedge clk); @(posedge clk); 
+			@(posedge clk); @(posedge clk); @(posedge clk); 
 			PCPrev <= PC;
-			@(posedge clk);
+			@(posedge clk);@(posedge clk); @(posedge clk); 
 		end
 		$stop;
 	end

@@ -39,10 +39,10 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY register_N
+set_global_assignment -name TOP_LEVEL_ENTITY CPU_pipelined64
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "THU JUL 11 11:26:45 2013"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.0.2 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.0.1 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
@@ -297,43 +297,6 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"
-set_global_assignment -name SYSTEMVERILOG_FILE WB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE UE_64.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RF.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux5x2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE MEM.sv
-set_global_assignment -name SYSTEMVERILOG_FILE IF.sv
-set_global_assignment -name SYSTEMVERILOG_FILE EX.sv
-set_global_assignment -name SYSTEMVERILOG_FILE CPU_pipelined64.sv
-set_global_assignment -name SDC_FILE DE1_SoC.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE SE_64.sv
-set_global_assignment -name SYSTEMVERILOG_FILE register_64.sv
-set_global_assignment -name SYSTEMVERILOG_FILE register_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
-set_global_assignment -name SYSTEMVERILOG_FILE or_64.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x32_64.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux32_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE math.sv
-set_global_assignment -name SYSTEMVERILOG_FILE LSL_2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE instructmem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE fulladdsub_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE fulladder_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE flagfile.sv
-set_global_assignment -name SYSTEMVERILOG_FILE D_FF.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decoder5_32.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decoder3_8.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decoder2_4.sv
-set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE controlblock.sv
-set_global_assignment -name SYSTEMVERILOG_FILE and_3.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ALU_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
-set_global_assignment -name SDC_FILE DE1_SOC_golden_top.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE register_N.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -705,4 +668,42 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_global_assignment -name SYSTEMVERILOG_FILE Forward_Logic.sv
+set_global_assignment -name SYSTEMVERILOG_FILE WB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE UE_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux5x2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MEM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE EX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CPU_pipelined64.sv
+set_global_assignment -name SDC_FILE DE1_SoC.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE SE_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE register_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE register_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x32_64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux32_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE math.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LSL_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE instructmem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fulladdsub_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fulladder_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flagfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE D_FF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder5_32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder3_8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder2_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controlblock.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
+set_global_assignment -name SDC_FILE DE1_SOC_golden_top.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE register_N.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

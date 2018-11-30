@@ -5,6 +5,8 @@ vlib work
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
 
+vlog "./Forward_Logic.sv"
+vlog "./Register_N.sv"
 vlog "./CPU_pipelined64.sv"
 vlog "./IF.sv"
 vlog "./RF.sv"
