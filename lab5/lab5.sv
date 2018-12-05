@@ -245,9 +245,12 @@ module lab5_testbench ();
 		resetMem();				// Initialize the memory.
 		
 		// Do 20 random reads.
-		for (i=0; i<32; i++) begin
-			addr = i*8; // *8 to doubleword-align the access.
+		for (i=0; i<2**5; i++) begin
+			addr = i*(2**3); // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
+			//if ((delay != 5) & (delay != 19) & (delay != 116))
+			//	$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
+			//			$time, delay);
 			$display("%t Read took %d cycles", $time, delay);
 		end
 		
