@@ -25,7 +25,7 @@
 // Line to set up the timing of simulation: says units to use are ns, and smallest resolution is 10ps.
 `timescale 1ns/10ps
 
-module lab5 #(parameter [22:0] MODEL_NUMBER = 1632534, parameter DMEM_ADDRESS_WIDTH = 20) (
+module lab5 #(parameter [22:0] MODEL_NUMBER = 1350364, parameter DMEM_ADDRESS_WIDTH = 20) (
 	// Commands:
 	//   (Comes from processor).
 	input		logic [DMEM_ADDRESS_WIDTH-1:0]	address,			// The byte address.  Must be word-aligned if byte_access != 1.
@@ -51,7 +51,7 @@ endmodule
 // Test the data memory, and figure out the settings.
 
 module lab5_testbench ();
-	localparam USERID = 1470460;  // Set to your student ID #
+	localparam USERID = 1632534;  // Set to your student ID #
 	localparam ADDRESS_WIDTH = 20;
 	localparam DATA_WIDTH = 8;
 	
@@ -236,38 +236,95 @@ module lab5_testbench ();
 		#1;
 	endtask
 	
-	logic	[DATA_WIDTH-1:0][7:0]	dummy_data;
+	logic	[DATA_WIDTH-1:0][7:0]	dummy_data, dummy_data2;
 	logic [ADDRESS_WIDTH-1:0]		addr;
-	int	i, delay, minval, maxval;
+	int	i, j, delay, minval, maxval;
 	
 	initial begin
-		dummy_data <= '0;
+		dummy_data <= '0; dummy_data2 <= '0;
 		resetMem();				// Initialize the memory.
 		
-		// Do 20 random reads.
-		for (i=0; i<2**5; i++) begin
+		// BASIC Test
+		/*for (i=0; i<2**20; i++) begin
 			addr = i*(2**3); // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
-			//if ((delay != 5) & (delay != 19) & (delay != 116))
-			//	$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
-			//			$time, delay);
-			$display("%t Read took %d cycles", $time, delay);
+			//$display("%t Read took %d cycles", $time, delay);
+			if ((delay != 2) & (delay != 12) & (delay != 77))
+				$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
+						$time, delay);
+		end*/
+		
+		// total capacity test
+		/*for (j=0; j<15; j++) begin
+			for (i=0; i<2**j; i++) begin
+				addr = i*(2**3); // *8 to doubleword-align the access.
+				readMem(addr, dummy_data, delay);
+				//$display("%t Read took %d cycles", $time, delay);
+				//if ((delay != 2) & (delay != 12) & (delay != 77))
+				//	$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
+				//			$time, delay);
+			end
+			readMem(0, dummy_data, delay);
+			$display("%t Read took %d cycles, size: %d", $time, delay, j);
+		end*/
+		
+		// modularity test.
+		/*for (j=1; j<=2**5; j++) begin
+			for (i=0; i*j<=2**5; i++) begin
+				addr = i*j*(2**3); // *8 to doubleword-align the access.
+				readMem(addr, dummy_data, delay);
+			end
+			readMem(0, dummy_data, delay);
+			$display("%t Read took %d cycles, mod: %d", $time, delay, j);
+		end*/
+		
+		// fill up cache test
+		/*for (i=0; i<2**6; i++) begin
+			if (i < 2**5) begin
+				addr = i*(2**3); // *8 to doubleword-align the access.
+				readMem(addr, dummy_data, delay);
+			end
+			else begin
+				addr = (i-2**5)*(2**3); // *8 to doubleword-align the access.
+				readMem(addr, dummy_data, delay); 
+				if (delay > 51)
+					$display("%d Read took %d cycles", (i-2**5), delay);
+			end
+		end*/
+		
+		// write through test
+		addr = 0;
+		readMem(addr, dummy_data, delay);
+		
+		dummy_data = $random();
+		addr = 0;
+		writeMem(addr, dummy_data, 8'hFF, delay);
+		
+		readMem(addr, dummy_data2, delay);
+		$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);
+		
+		for (i=1; i<=2**4; i++) begin
+			addr = i*(2**3);
+			readMem(addr, dummy_data2, delay);
 		end
+		addr = 0;
+		readMem(addr, dummy_data2, delay);
+		$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);
 		
 		// Do 5 random double-word writes of random data.
-		for (i=0; i<0; i++) begin
+		/*for (i=0; i<0; i++) begin
 			addr = $random()*8; // *8 to doubleword-align the access.
 			dummy_data = $random();
 			writeMem(addr, dummy_data, 8'hFF, delay);
 			$display("%t Write took %d cycles", $time, delay);
-		end
+		end*/
 		
 		// Reset the memory.
 		resetMem();
 		
 		// Read all of the first KB
-		readStride(0, 8, 1024/8, minval, maxval);
-		$display("%t Reading the first KB took between %d and %d cycles each", $time, minval, maxval);
+		// readStride(0, 8, 1024/8, minval, maxval);
+		// $display("%t Reading the first KB took between %d and %d cycles each", $time, minval, maxval);
 
 		$stop();
 	end
