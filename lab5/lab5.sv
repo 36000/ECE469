@@ -245,14 +245,14 @@ module lab5_testbench ();
 		resetMem();				// Initialize the memory.
 		
 		// Do 20 random reads.
-		for (i=0; i<20; i++) begin
-			addr = $random()*8; // *8 to doubleword-align the access.
+		for (i=0; i<32; i++) begin
+			addr = i*8; // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
 			$display("%t Read took %d cycles", $time, delay);
 		end
 		
 		// Do 5 random double-word writes of random data.
-		for (i=0; i<5; i++) begin
+		for (i=0; i<0; i++) begin
 			addr = $random()*8; // *8 to doubleword-align the access.
 			dummy_data = $random();
 			writeMem(addr, dummy_data, 8'hFF, delay);
