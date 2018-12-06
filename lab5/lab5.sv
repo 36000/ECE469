@@ -236,12 +236,12 @@ module lab5_testbench ();
 		#1;
 	endtask
 	
-	logic	[DATA_WIDTH-1:0][7:0]	dummy_data, dummy_data2;
+	logic	[DATA_WIDTH-1:0][7:0]	dummy_data;
 	logic [ADDRESS_WIDTH-1:0]		addr;
 	int	i, j, delay, minval, maxval;
 	
 	initial begin
-		dummy_data <= '0; dummy_data2 <= '0;
+		dummy_data <= '0;
 		resetMem();				// Initialize the memory.
 		
 		// BASIC Test
@@ -252,6 +252,15 @@ module lab5_testbench ();
 			if ((delay != 2) & (delay != 12) & (delay != 77))
 				$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
 						$time, delay);
+		end*/
+		
+		// RANDOM Test
+		/*for (i=0; i<2**15; i++) begin
+			addr = $random()*(2**3); // *8 to doubleword-align the access.
+			readMem(addr, dummy_data, delay);
+				if ((delay != 2) & (delay != 12) & (delay != 77))
+					$display("ATTENTION! CACHE FOUND! REVERSE COURSE AND ANALYZE! \n%t Read took %d cycles",
+							$time, delay);
 		end*/
 		
 		// total capacity test
@@ -267,6 +276,16 @@ module lab5_testbench ();
 			readMem(0, dummy_data, delay);
 			$display("%t Read took %d cycles, size: %d", $time, delay, j);
 		end*/
+		
+		// L2 test
+		/* for (i=0; i<=8; i++) begin
+			for (j=0; j<=i; j++) begin
+				readMem(32*16*j, dummy_data, delay);
+			end
+			readMem(16, dummy_data, delay);
+			$display("%t Read took %d cycles, # of reads: %d", $time, delay, i);
+			resetMem();
+		end */
 		
 		// modularity test.
 		/*for (j=1; j<=2**5; j++) begin
@@ -293,23 +312,49 @@ module lab5_testbench ();
 		end*/
 		
 		// write through test
-		addr = 0;
+		/*addr = 0;
 		readMem(addr, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);
 		
 		dummy_data = $random();
-		addr = 0;
 		writeMem(addr, dummy_data, 8'hFF, delay);
+		$display("%t Write took %d cycles, data written: %d", $time, delay, dummy_data);
 		
-		readMem(addr, dummy_data2, delay);
-		$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);
+		readMem(0, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);
 		
-		for (i=1; i<=2**4; i++) begin
+		readMem(0, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);
+
+		
+		noopMem();
+		noopMem();
+		noopMem();
+		// write buffer test
+		readMem(128, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);
+		readMem(256, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);
+		writeMem(0, dummy_data, 8'hFF, delay);
+		$display("%t Write took %d cycles", $time, delay);
+		noopMem();
+		noopMem();
+		noopMem();
+		writeMem(128, dummy_data, 8'hFF, delay);
+		$display("%t Write took %d cycles", $time, delay);
+		readMem(128, dummy_data, delay);
+		$display("%t Read took %d cycles", $time, delay);*/
+		
+		//readMem(addr, dummy_data2, delay);
+		//$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);
+		
+		/*for (i=1; i<=2**4; i++) begin
 			addr = i*(2**3);
 			readMem(addr, dummy_data2, delay);
 		end
 		addr = 0;
 		readMem(addr, dummy_data2, delay);
-		$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);
+		$display("%t Read took %d cycles, data written: %d, data read: %d", $time, delay, dummy_data, dummy_data2);*/
 		
 		// Do 5 random double-word writes of random data.
 		/*for (i=0; i<0; i++) begin
